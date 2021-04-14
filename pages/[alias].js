@@ -29,7 +29,7 @@ export default function Alias(props) {
 export async function getServerSideProps({ query }) {
   const { alias } = query;
 
-  const res = await fetch(`/api/url/${alias}`);
+  const res = await fetch(`https://okkar.tk/api/url/${alias}`);
   const data = await res.json();
 
   return {
