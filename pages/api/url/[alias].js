@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   // Rest of the API logic
   const url_table = {
-    linkedin: "https://www.linkedin.com/in/okarmin/",
+    linkedin: "https://www.linkedin.com/in/okarmin",
     github: "https://github.com/OkkarMin",
     telegram: "https://t.me/okarmax",
   };
