@@ -1,16 +1,23 @@
 import redirect from "nextjs-redirect";
-import { Image, Page, Spacer, Loading } from "@geist-ui/react";
+import { Box, Heading, Image, Link, Spinner, VStack } from "@chakra-ui/react";
 
 export default function AliasRedirect({ to_url }) {
   const Redirect = redirect(to_url);
 
   return (
-    <Page>
-      <Redirect>
-        <Loading>redirecting to {to_url}</Loading>
-        <Spacer />
-        <Image width={600} height={290} src="/redirect.png" />
-      </Redirect>
-    </Page>
+    <Redirect>
+      <VStack m="20px auto">
+        <Spinner />
+        <Heading as="h3" size="lg">
+          Redirecting to{" "}
+          <Link color="red.400" href={to_url}>
+            {to_url}
+          </Link>
+        </Heading>
+        <Box m="20px auto" maxW="sm">
+          <Image src="/redirect.png" />
+        </Box>
+      </VStack>
+    </Redirect>
   );
 }
