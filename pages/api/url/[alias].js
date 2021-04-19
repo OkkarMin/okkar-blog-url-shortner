@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   await cors(req, res);
 
   // Rest of the API logic
+  // TODO: move this to a database somewhere
   const url_table = {
     linkedin: "https://www.linkedin.com/in/okarmin",
     github: "https://github.com/OkkarMin",
