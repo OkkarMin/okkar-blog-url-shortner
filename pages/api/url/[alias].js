@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   const { alias } = req.query;
 
   if (!url_table.hasOwnProperty(alias)) {
-    return res.json({ error: `${alias} not found, did you mistype it?` });
+    return res.json({ error: `okkar.tk/${alias} not found` });
   }
 
   return res.json({ url: url_table[alias] });
