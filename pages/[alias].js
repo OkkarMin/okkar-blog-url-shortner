@@ -1,9 +1,7 @@
 import AliasError from "../components/alias_error";
 import AliasRedirect from "../components/alias_redirect";
 
-export default function Alias(props) {
-  const { url, error } = props.data;
-
+export default function Alias({ data: { url, error } }) {
   if (error) return <AliasError error_message={error} />;
 
   return <AliasRedirect to_url={url} />;
