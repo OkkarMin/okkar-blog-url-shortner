@@ -1,11 +1,14 @@
-import { Image, Page } from "@geist-ui/react";
+import { Box, Heading, Image, VStack } from "@chakra-ui/react";
 
 export default function AliasEror({ error_message }) {
   return (
-    <Page>
-      <Image.Browser url={error_message} invert>
-        <Image width={600} height={290} src="/404.jpg" />
-      </Image.Browser>
-    </Page>
+    <VStack m="20px auto">
+      <Heading as="h3" size="lg">
+        okkar.tk/{error_message}
+      </Heading>
+      <Box m="20px auto" maxW="xl">
+        <Image src="/404.jpg" />
+      </Box>
+    </VStack>
   );
 }
