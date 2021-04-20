@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AliasEror({ error_message }) {
   return (
     <Flex h="100vh" alignItems="center" justifyContent="center">
-      <VStack m="20px auto">
+      <VStack>
         <Heading as="h3" size="lg">
           {error_message}
         </Heading>
