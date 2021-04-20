@@ -1,23 +1,26 @@
 import redirect from "nextjs-redirect";
-import { Box, Heading, Image, Link, Spinner, VStack } from "@chakra-ui/react";
+import Image from "next/image";
+import { Box, Flex, Heading, Link, Spinner, VStack } from "@chakra-ui/react";
 
-export default function AliasRedirect({ to_url }) {
+export default function Develop({ to_url }) {
   const Redirect = redirect(to_url);
 
   return (
     <Redirect>
-      <VStack m="20px auto">
-        <Spinner />
-        <Heading as="h3" size="lg">
-          Redirecting to{" "}
-          <Link color="red.400" href={to_url}>
-            {to_url}
-          </Link>
-        </Heading>
-        <Box m="20px auto" maxW="sm">
-          <Image src="/redirect.png" />
-        </Box>
-      </VStack>
+      <Flex h="100vh" alignItems="center" justifyContent="center">
+        <VStack>
+          <Spinner />
+          <Heading as="h3" size="lg">
+            Redirecting to{" "}
+            <Link color="red.400" href={to_url}>
+              {to_url}
+            </Link>
+          </Heading>
+          <Box m="20px auto" maxW="sm">
+            <Image src="/redirect.png" width="600" height="400" />
+          </Box>
+        </VStack>
+      </Flex>
     </Redirect>
   );
 }
