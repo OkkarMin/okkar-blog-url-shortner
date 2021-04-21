@@ -12,6 +12,8 @@ export default function Develop({ to_url }) {
           <Spinner />
           <Heading as="h3" size="lg">
             redirecting to{" "}
+          </Heading>
+          <Heading as="h3" size="lg">
             <Link color="red.500" href={to_url}>
               {to_url}
             </Link>
