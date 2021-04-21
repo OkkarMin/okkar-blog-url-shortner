@@ -11,7 +11,7 @@ export default function Develop({ to_url }) {
         <VStack>
           <Spinner />
           <Heading as="h3" size="lg">
-            Redirecting to{" "}
+            redirecting to{" "}
             <Link color="red.500" href={to_url}>
               {to_url}
             </Link>
