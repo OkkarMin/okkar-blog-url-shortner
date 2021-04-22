@@ -19,7 +19,7 @@ export default function Develop({ to_url }) {
             </Link>
           </Heading>
           <Box m="20px auto" maxW="sm">
-            <Image src="/redirect.png" width="600" height="400" />
+            <Image src="/redirect.png" width="600" height="500" />
           </Box>
         </VStack>
       </Flex>
