@@ -1,4 +1,9 @@
-# Blog + URL shortener
+# Blog + URL shortener [okkar.tk](https://okkar.tk) ➡ [okkarmin.github.io](okkarmin.github.io)
+
+- [okkar.tk](https://okkar.tk)
+- [okkar.tk/linkedin](https://okkar.tk/linkedin)
+- [okkar.tk/telegram](https://okkar.tk/telegram)
+- [okkar.tk/github](https://okkar.tk/github)
 
 ## Main features
 
