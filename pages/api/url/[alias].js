@@ -13,6 +13,9 @@ const cors = initMiddleware(
 export default async function handler(req, res) {
   await cors(req, res);
 
+  // cache response for 24hours
+  res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
+
   // Rest of the API logic
   // TODO: move this to a database somewhere
   const url_table = {
