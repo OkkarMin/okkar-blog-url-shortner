@@ -27,9 +27,8 @@ export default async function handler(req, res) {
   const { alias } = req.query;
 
   if (!url_table.hasOwnProperty(alias)) {
-    res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
-    return res.json({ error: `okkar.tk/${alias} not found` });
+    return res.status(404).json({ error: `okkar.tk/${alias} not found` });
   }
 
-  return res.json({ url: url_table[alias] });
+  return res.status(302).json({ url: url_table[alias] });
 }
