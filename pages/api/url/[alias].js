@@ -1,4 +1,5 @@
 import Cors from "cors";
+import { readFileSync } from "fs";
 import initMiddleware from "../../../lib/init-middleware";
 
 // Initialize the cors middleware
@@ -18,11 +19,8 @@ export default async function handler(req, res) {
 
   // Rest of the API logic
   // TODO: move this to a database somewhere
-  const url_table = {
-    linkedin: "https://www.linkedin.com/in/okarmin",
-    github: "https://github.com/OkkarMin",
-    telegram: "https://t.me/okarmax",
-  };
+  const file = readFileSync("data/aliases.json", "utf-8");
+  const url_table = JSON.parse(file);
 
   const { alias } = req.query;
 
