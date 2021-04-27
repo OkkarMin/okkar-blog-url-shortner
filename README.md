@@ -5,7 +5,7 @@
 - [okkar.tk/telegram](https://okkar.tk/telegram)
 - [okkar.tk/github](https://okkar.tk/github)
 
-## Main features
+## Main features 🚀
 
 - (Work in Progress) Blog/Portfolio
 - Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
