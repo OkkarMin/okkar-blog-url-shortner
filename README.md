@@ -11,3 +11,9 @@
 - Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
 - (Work in Progress) Track aliases click rate
 - (Work in Progress) Dashboard to add/remove/view aliases
+
+## The Stack 🥞
+
+- NextJs
+- Prisma<?>
+- ChakraUI
