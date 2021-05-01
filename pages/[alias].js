@@ -1,5 +1,6 @@
 import AliasError from "../components/alias_error";
 import AliasRedirect from "../components/alias_redirect";
+import { server } from "../config";
 
 export default function Alias({ data: { url, error } }) {
   if (error) return <AliasError error_message={error} />;
@@ -10,7 +11,7 @@ export default function Alias({ data: { url, error } }) {
 export async function getServerSideProps({ query }) {
   const { alias } = query;
 
-  const res = await fetch(`https://okkar.tk/api/url/${alias}`);
+  const res = await fetch(`${server}/api/url/${alias}`);
   const data = await res.json();
 
   return {
