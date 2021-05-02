@@ -1,4 +1,5 @@
 import Cors from "cors";
+import db from "../../../lib/db";
 import initMiddleware from "../../../lib/init-middleware";
 
 // Initialize the cors middleware
@@ -16,19 +17,14 @@ export default async function handler(req, res) {
   // cache response for 24hours
   res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
 
-  // Rest of the API logic
-  // TODO: move this to a database somewhere
-  const url_table = {
-    linkedin: "https://www.linkedin.com/in/okarmin",
-    github: "https://github.com/OkkarMin",
-    telegram: "https://t.me/okarmax",
-  };
-
   const { alias } = req.query;
 
-  if (!url_table.hasOwnProperty(alias)) {
+  const result = await db.collection("alias").doc(alias).get();
+
+  try {
+    const { url } = result.data();
+    return res.status(302).json({ url });
+  } catch (error) {
     return res.status(404).json({ error: `okkar.tk/${alias} not found` });
   }
-
-  return res.status(302).json({ url: url_table[alias] });
 }
