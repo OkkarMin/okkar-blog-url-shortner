@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "header",
     "home",
-    "_app"
+    "_app",
+    "introduction"
   ]
 }
