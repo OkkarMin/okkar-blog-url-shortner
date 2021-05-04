@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "header",
-    "home"
+    "home",
+    "_app"
   ]
 }
