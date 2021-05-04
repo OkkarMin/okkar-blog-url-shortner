@@ -1,4 +1,5 @@
 import Cors from "cors";
+import { server } from "../../../config";
 import db from "../../../lib/db";
 import initMiddleware from "../../../lib/init-middleware";
 
@@ -25,6 +26,6 @@ export default async function handler(req, res) {
     const { url } = result.data();
     return res.status(302).json({ url });
   } catch (error) {
-    return res.status(404).json({ error: `okkar.tk/${alias} not found` });
+    return res.status(404).json({ error: `${server}/${alias} not found` });
   }
 }
