@@ -5,8 +5,9 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Header() {
   return (
-    <Stack spacing={2} justifyContent="flex-start" p={[2, 4, 6, 8]}>
+    <>
       <Stack spacing={2} isInline justifyContent="space-around">
+        {/* Header logos */}
         <Stack spacing={2} isInline>
           <Link href={`${server}/github`}>
             <IconButton
@@ -23,12 +24,14 @@ export default function Header() {
             />
           </Link>
         </Stack>
+
+        {/* Header Blog and Resume buttons */}
         <Stack spacing={2} isInline>
           <Button variant="ghost">Blog</Button>
           <Button variant="ghost">Resume</Button>
         </Stack>
       </Stack>
       <Stack spacing={2} />
-    </Stack>
+    </>
   );
 }
