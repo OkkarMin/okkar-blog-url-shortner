@@ -1,5 +1,5 @@
 import { server } from "../config";
-import NextLink from "next/Link";
+import NextLink from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Stack, Heading, Text, Link } from "@chakra-ui/react";
 
