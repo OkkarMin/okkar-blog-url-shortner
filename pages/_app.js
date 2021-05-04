@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { analytics } from "../lib/firebase";
 import { useRouter } from "next/router";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider>
+      <CSSReset />
       <Component {...pageProps} />
     </ChakraProvider>
   );
