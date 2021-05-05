@@ -17,7 +17,7 @@ export default function Introduction() {
 
         <Text>
           Software Architect, System Engineer and Developer. Connect with me at{" "}
-          <Link color="cyan.700" isExternal={true} href={`${server}/linkedin`}>
+          <Link color="red.500" isExternal={true} href={`${server}/linkedin`}>
             LinkedIn
             <ExternalLinkIcon mx="2px" />
           </Link>
@@ -26,11 +26,11 @@ export default function Introduction() {
         <Text>
           Read my{" "}
           <NextLink href={`${server}/blog`}>
-            <Link color="cyan.700">blog posts </Link>
+            <Link color="red.500">blog posts </Link>
           </NextLink>{" "}
           or take a look at some of{" "}
           <NextLink href={`${server}/projects`}>
-            <Link color="cyan.700">my projects </Link>
+            <Link color="red.500">my projects </Link>
           </NextLink>
           while you're here.
         </Text>
