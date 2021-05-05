@@ -1,4 +1,5 @@
 import { server } from "../config";
+import NextLink from "next/link";
 import { Button, HStack, IconButton, Link } from "@chakra-ui/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
@@ -25,8 +26,15 @@ export default function Header() {
 
       {/* Header Blog and Resume buttons */}
       <HStack spacing={0}>
-        <Button variant="ghost">Blog</Button>
-        <Button variant="ghost">Resume</Button>
+        <NextLink href={`${server}/`}>
+          <Button variant="ghost">Home</Button>
+        </NextLink>
+        <NextLink href={`${server}/blog`}>
+          <Button variant="ghost">Blog</Button>
+        </NextLink>
+        <NextLink href={`${server}/projects`}>
+          <Button variant="ghost">Projects</Button>
+        </NextLink>
       </HStack>
     </HStack>
   );
