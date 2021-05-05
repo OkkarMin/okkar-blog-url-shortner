@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { server } from "../config";
-import { Button, Stack, IconButton } from "@chakra-ui/react";
+import { Button, Stack, IconButton, Link } from "@chakra-ui/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Header() {
@@ -9,14 +8,14 @@ export default function Header() {
       <Stack spacing={2} isInline justifyContent="space-around">
         {/* Header logos */}
         <Stack spacing={2} isInline>
-          <Link href={`${server}/github`}>
+          <Link isExternal href={`${server}/github`}>
             <IconButton
               aria-label="Link to Okkar's Github"
               variant="ghost"
               icon={<AiFillGithub />}
             />
           </Link>
-          <Link href={`${server}/linkedin`}>
+          <Link isExternal href={`${server}/linkedin`}>
             <IconButton
               aria-label="Link to Okkar's Linkedin"
               variant="ghost"
