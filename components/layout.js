@@ -1,9 +1,9 @@
-import { Stack } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 export default function Layout({ children }) {
   return (
-    <Stack spacing={2} justifyContent="flex-start" p={[2, 4, 6, 8]}>
+    <Flex direction="column" minHeight="100vh" p={[2, 4]}>
       {children}
-    </Stack>
+    </Flex>
   );
 }
