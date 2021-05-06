@@ -1,5 +1,6 @@
 import { server } from "../config";
 import NextLink from "next/link";
+import ReactRotatingText from "react-rotating-text";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Container, Heading, Text, Link } from "@chakra-ui/react";
 
@@ -8,8 +9,19 @@ export default function Introduction() {
     <Container mt={6}>
       <Heading>Hello 👋 I'm Okkar Min</Heading>
 
+      <Heading textDecor="underline">
+        <ReactRotatingText
+          items={[
+            "Software Architect",
+            "System Enginner",
+            "Software Developer",
+            "IOT Enthusiast",
+          ]}
+        />
+      </Heading>
+
       <Text mt={6}>
-        Software Architect, System Engineer and Developer. Connect with me at{" "}
+        Connect with me at{" "}
         <Link
           textDecoration="underline"
           color="red.500"
