@@ -5,7 +5,7 @@ import Body from "../components/body";
 export default function Home() {
   return (
     <Layout>
-      <Introduction />
+      {/* <Introduction /> */}
       <Body />
     </Layout>
   );
