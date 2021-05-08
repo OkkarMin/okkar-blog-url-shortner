@@ -5,7 +5,7 @@ export default function Footer(props) {
     <>
       <Spacer />
       <Container centerContent>
-        <Text fontSize="xs">🛠 with NextJS and ChakraUI</Text>
+        <Text fontSize="xs">🛠 by Okkar with [♥️ , NextJS, ChakraUI]</Text>
       </Container>
     </>
   );
