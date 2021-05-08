@@ -18,11 +18,15 @@ import {
   TabPanel,
   StackDivider,
 } from "@chakra-ui/react";
+import { useState } from "react";
+import NextLink from "next/link";
+import { server } from "../config";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 import ReactRotatingText from "react-rotating-text";
 
 export default function Body() {
+  const [tabIndex, setTabIndex] = useState(0);
   return (
     <VStack>
       <Container>
@@ -61,7 +65,12 @@ export default function Body() {
                 </Text>
               </Stack>
 
-              <Tabs isFitted variant="enclosed">
+              <Tabs
+                isFitted
+                variant="enclosed"
+                index={tabIndex}
+                onChange={(index) => setTabIndex(index)}
+              >
                 <TabList mb={4}>
                   <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>
                     Bio
@@ -91,25 +100,30 @@ export default function Body() {
                         w="full"
                         rightIcon={<ArrowForwardIcon />}
                         variant="outline"
+                        onClick={() => setTabIndex(1)}
                       >
                         Experience
                       </Button>
 
-                      <Button
-                        w="full"
-                        rightIcon={<ArrowForwardIcon />}
-                        variant="outline"
-                      >
-                        Blog
-                      </Button>
+                      <NextLink href={`${server}/blog`}>
+                        <Button
+                          w="full"
+                          rightIcon={<ArrowForwardIcon />}
+                          variant="outline"
+                        >
+                          Blog
+                        </Button>
+                      </NextLink>
 
-                      <Button
-                        w="full"
-                        rightIcon={<ArrowForwardIcon />}
-                        variant="outline"
-                      >
-                        Projects
-                      </Button>
+                      <NextLink href={`${server}/projects`}>
+                        <Button
+                          w="full"
+                          rightIcon={<ArrowForwardIcon />}
+                          variant="outline"
+                        >
+                          Projects
+                        </Button>
+                      </NextLink>
                     </Stack>
 
                     <HStack mt={4} divider={<StackDivider />}></HStack>
