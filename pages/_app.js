@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import { analytics } from "../lib/firebase";
+import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { analytics } from "../lib/firebase";
+import { SEOConfiguration } from "../config";
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
@@ -24,6 +26,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider>
+      <DefaultSeo {...SEOConfiguration} />
       <CSSReset />
       <Component {...pageProps} />
     </ChakraProvider>
