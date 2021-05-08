@@ -1,50 +1,142 @@
-import { server } from "../config";
-import NextLink from "next/link";
+import {
+  Box,
+  Center,
+  Container,
+  Heading,
+  Text,
+  HStack,
+  VStack,
+  Flex,
+  Avatar,
+  Stack,
+  Button,
+  Image,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  StackDivider,
+} from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+
 import ReactRotatingText from "react-rotating-text";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Container, Heading, Text, Link } from "@chakra-ui/react";
 
-export default function Introduction() {
+export default function Body() {
   return (
-    <Container mt={6}>
-      <Heading>Hello 👋 I'm Okkar Min</Heading>
+    <VStack>
+      <Container>
+        <Center py={6}>
+          <Box w={"full"} boxShadow={"2xl"} rounded={"lg"} overflow={"hidden"}>
+            <Image
+              h={"120px"}
+              w={"full"}
+              src={
+                "https://images.unsplash.com/photo-1615192232476-758a110dac9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
+              }
+              objectFit={"cover"}
+            />
+            <Flex justify={"center"} mt={-12}>
+              <Avatar
+                size={"xl"}
+                src={"https://avatars.githubusercontent.com/u/24297303?v=4"}
+                alt={"Okkar Min"}
+                bg="white"
+              />
+            </Flex>
 
-      <Heading textDecor="underline">
-        <ReactRotatingText
-          items={[
-            "Software Architect",
-            "System Enginner",
-            "Software Developer",
-            "IOT Enthusiast",
-          ]}
-        />
-      </Heading>
+            <Box p={6}>
+              <Stack spacing={0} align={"center"} mb={5}>
+                <Heading fontSize={"2xl"}>Okkar Min</Heading>
+                <Text>
+                  <ReactRotatingText
+                    items={[
+                      "Software Architect",
+                      "System Enginner",
+                      "Software Developer",
+                      "IOT Enthusiast",
+                      "Somethiing else",
+                    ]}
+                  />
+                </Text>
+              </Stack>
 
-      <Text mt={6}>
-        Connect with me at{" "}
-        <Link
-          textDecoration="underline"
-          color="red.500"
-          isExternal={true}
-          href={`${server}/linkedin`}
-        >
-          LinkedIn
-          <ExternalLinkIcon mx="2px" />
-        </Link>
-        Read my{" "}
-        <NextLink href={`${server}/blog`}>
-          <Link textDecoration="underline" color="red.500">
-            blog posts
-          </Link>
-        </NextLink>{" "}
-        or take a look at some of{" "}
-        <NextLink href={`${server}/projects`}>
-          <Link textDecoration="underline" color="red.500">
-            my projects
-          </Link>
-        </NextLink>{" "}
-        while you're here.
-      </Text>
-    </Container>
+              <Tabs isFitted variant="enclosed">
+                <TabList mb={4}>
+                  <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>
+                    Bio
+                  </Tab>
+                  <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>
+                    {" "}
+                    Experience{" "}
+                  </Tab>
+                </TabList>
+                <TabPanels>
+                  <TabPanel>
+                    <Text>
+                      Hello 👋 I'm Okkar Min, final year computer science
+                      student from Nanyang Technological University.
+                    </Text>
+                    <Text mt={4}>
+                      "To automate or not to automate, that is the question". I
+                      enjoy discussing on technology and its trade-offs.
+                    </Text>
+
+                    <Stack
+                      mt={6}
+                      direction={["column", "row"]}
+                      divider={<StackDivider />}
+                    >
+                      <Button
+                        w="full"
+                        rightIcon={<ArrowForwardIcon />}
+                        variant="outline"
+                      >
+                        Experience
+                      </Button>
+
+                      <Button
+                        w="full"
+                        rightIcon={<ArrowForwardIcon />}
+                        variant="outline"
+                      >
+                        Blog
+                      </Button>
+
+                      <Button
+                        w="full"
+                        rightIcon={<ArrowForwardIcon />}
+                        variant="outline"
+                      >
+                        Projects
+                      </Button>
+                    </Stack>
+
+                    <HStack mt={4} divider={<StackDivider />}></HStack>
+                  </TabPanel>
+                  <TabPanel>
+                    <Text>✏️ in progress</Text>
+                  </TabPanel>
+                </TabPanels>
+              </Tabs>
+
+              {/* <Button
+                w={"full"}
+                mt={8}
+                bg={useColorModeValue("#151f21", "gray.900")}
+                color={"white"}
+                rounded={"md"}
+                _hover={{
+                  transform: "translateY(-2px)",
+                  boxShadow: "lg",
+                }}
+              >
+                Follow
+              </Button> */}
+            </Box>
+          </Box>
+        </Center>
+      </Container>
+    </VStack>
   );
 }
