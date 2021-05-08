@@ -125,8 +125,6 @@ export default function Body() {
                         </Button>
                       </NextLink>
                     </Stack>
-
-                    <HStack mt={4} divider={<StackDivider />}></HStack>
                   </TabPanel>
                   <TabPanel>
                     <Text>✏️ in progress</Text>
