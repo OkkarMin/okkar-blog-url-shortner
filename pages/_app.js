@@ -25,11 +25,13 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ChakraProvider>
+    <>
       <DefaultSeo {...SEOConfiguration} />
-      <CSSReset />
-      <Component {...pageProps} />
-    </ChakraProvider>
+      <ChakraProvider>
+        <CSSReset />
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 export default MyApp;
