@@ -16,6 +16,12 @@ export const SEOConfiguration = {
         height: 628,
         alt: "Okkar Min's meta image",
       },
+      {
+        url: "https://okkarm.in/meta_image_300_200.png",
+        width: 300,
+        height: 200,
+        alt: "Okkar Min's meta image",
+      },
     ],
   },
 };
