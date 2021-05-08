@@ -11,10 +11,10 @@ export const SEOConfiguration = {
     defaultTitle: "Okkar Min - Tinkerer, Developer, Occasional writer",
     images: [
       {
-        url: "https://okkarm.in/meta_image.png",
-        width: 1200,
-        height: 628,
-        alt: "Okkar Min's meta image 1200x628",
+        url: "https://okkarm.in/meta_image_256_256.png",
+        width: 256,
+        height: 256,
+        alt: "Okkar Min's meta image 256x256",
       },
       {
         url: "https://okkarm.in/meta_image_300_200.png",
@@ -23,10 +23,10 @@ export const SEOConfiguration = {
         alt: "Okkar Min's meta image 300x200",
       },
       {
-        url: "https://okkarm.in/meta_image_256_256.png",
-        width: 256,
-        height: 256,
-        alt: "Okkar Min's meta image 256x256",
+        url: "https://okkarm.in/meta_image.png",
+        width: 1200,
+        height: 628,
+        alt: "Okkar Min's meta image 1200x628",
       },
     ],
   },
