@@ -1,20 +1,17 @@
+import useSWR from "swr";
+import { server } from "../config";
+import { useRouter } from "next/router";
 import AliasError from "../components/alias_error";
 import AliasRedirect from "../components/alias_redirect";
-import { server } from "../config";
+import AliasLoading from "../components/alias_loading";
 
-export default function Alias({ data: { url, error } }) {
-  if (error) return <AliasError error_message={error} />;
+export default function Alias() {
+  const { alias } = useRouter().query;
+  const { data, error } = useSWR(`${server}/api/url/${alias}`);
 
-  return <AliasRedirect to_url={url} />;
-}
+  if (error) return <AliasError error_message={`${alias} not found`} />;
+  if (!data) return <AliasLoading alias={alias} />;
+  if (data.error) return <AliasError error_message={data.error} />;
 
-export async function getServerSideProps({ query }) {
-  const { alias } = query;
-
-  const res = await fetch(`${server}/api/url/${alias}`);
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
+  return <AliasRedirect to_url={data.url} />;
 }
