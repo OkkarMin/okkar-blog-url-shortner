@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 export default function AliasRedirect({ to_url }) {
   const router = useRouter();
 
-  async function waitOneAndHalfSeconds() {
+  async function waitHalfSecond() {
     setTimeout(() => {
       router.push(to_url);
-    }, 1500);
+    }, 500);
   }
 
   useEffect(() => {
-    waitOneAndHalfSeconds();
+    waitHalfSecond();
   });
 
   return (
