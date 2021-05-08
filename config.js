@@ -7,8 +7,8 @@ export const SEOConfiguration = {
     locale: "en_IE",
     type: "website",
     url: "https://okkarm.in",
-    title: "Okkar Min - Developer, tinkerer, occasional writer",
-    defaultTitle: "Okkar Min - Developer, tinkerer, occasional writer",
+    title: "Okkar Min - Tinkerer, Developer, Occasional writer",
+    defaultTitle: "Okkar Min - Tinkerer, Developer, Occasional writer",
     images: [
       {
         url: "https://okkarm.in/meta_image.png",
