@@ -3,7 +3,7 @@ import Body from "../components/body";
 
 export default function Blog() {
   return (
-    <Layout>
+    <Layout title="📝 Blog">
       <Body />
     </Layout>
   );

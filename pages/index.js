@@ -3,7 +3,7 @@ import Introduction from "../components/introduction";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="🏠 Home">
       <Introduction />
     </Layout>
   );
