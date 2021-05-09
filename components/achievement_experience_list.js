@@ -16,7 +16,10 @@ export default function AchievementExperienceList(params) {
     <Stack direction={["column", "row"]} divider={<StackDivider />}>
       <VStack mt={["0", "4"]}>
         <Center minWidth="6.5em">
-          <Heading fontSize="md">‍🏆</Heading>
+          <VStack>
+            <Heading fontSize="md">‍Achievement</Heading>
+            <Heading fontSize="md">‍🏆</Heading>
+          </VStack>
         </Center>
       </VStack>
       <VStack alignItems="flex-start">

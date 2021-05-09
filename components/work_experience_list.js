@@ -18,7 +18,10 @@ export default function WorkExperienceList(params) {
     <Stack direction={["column", "row"]} divider={<StackDivider />}>
       <VStack mt={["0", "4"]}>
         <Center minWidth="6.5em">
-          <Heading fontSize="md">Work 👨🏻‍💻‍</Heading>
+          <VStack>
+            <Heading fontSize="md">Work‍</Heading>
+            <Heading fontSize="md">👨🏻‍💻‍</Heading>
+          </VStack>
         </Center>
       </VStack>
       <VStack alignItems="flex-start">
