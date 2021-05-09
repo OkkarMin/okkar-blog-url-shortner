@@ -39,10 +39,18 @@ export default function WorkExperienceList(params) {
             </HStack>
             <Box ml="4em">
               <UnorderedList>
-                <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                <ListItem>Consectetur adipiscing elit</ListItem>
-                <ListItem>Integer molestie lorem at massa</ListItem>
-                <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                <ListItem>
+                  Wrote programs in Python and JavaScript to automate manual
+                  processes.
+                </ListItem>
+                <ListItem>
+                  Coordinated ASEAN-wide Hackathon, DeepRacer competition and
+                  VirtualCareer Fair for 2500 students
+                </ListItem>
+                <ListItem>
+                  Guided students across ASEAN with their AWS cloud native
+                  system designs
+                </ListItem>
               </UnorderedList>
             </Box>
           </Box>
@@ -65,10 +73,13 @@ export default function WorkExperienceList(params) {
             </HStack>
             <Box ml="4em">
               <UnorderedList>
-                <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                <ListItem>Consectetur adipiscing elit</ListItem>
-                <ListItem>Integer molestie lorem at massa</ListItem>
-                <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                <ListItem>
+                  Researched and developed smart bin system using IOT technology
+                </ListItem>
+                <ListItem>
+                  Designed, implemented and documented mobile application for
+                  internal usage
+                </ListItem>
               </UnorderedList>
             </Box>
           </Box>
@@ -89,10 +100,10 @@ export default function WorkExperienceList(params) {
             </HStack>
             <Box ml="4em">
               <UnorderedList>
-                <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                <ListItem>Consectetur adipiscing elit</ListItem>
-                <ListItem>Integer molestie lorem at massa</ListItem>
-                <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                <ListItem>
+                  Taught junior college/polytechnic students programming and
+                  computational thinking classes
+                </ListItem>
               </UnorderedList>
             </Box>
           </Box>
