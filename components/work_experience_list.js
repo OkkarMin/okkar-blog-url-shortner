@@ -16,9 +16,11 @@ import {
 export default function WorkExperienceList(params) {
   return (
     <Stack direction={["column", "row"]} divider={<StackDivider />}>
-      <Center minWidth="6.5em">
-        <Heading fontSize="md">Work 👨🏻‍💻‍</Heading>
-      </Center>
+      <VStack mt={["0", "4"]}>
+        <Center minWidth="6.5em">
+          <Heading fontSize="md">Work 👨🏻‍💻‍</Heading>
+        </Center>
+      </VStack>
       <VStack alignItems="flex-start">
         <Flex direction="column" alignItems="flex-start">
           {/* AWS */}

@@ -87,8 +87,8 @@ export default function BioExperienceTabs() {
         <TabPanel>
           <Stack spacing={6}>
             <WorkExperienceList />
-            <EducationExperienceList />
             <AchievementExperienceList />
+            <EducationExperienceList />
           </Stack>
         </TabPanel>
       </TabPanels>
