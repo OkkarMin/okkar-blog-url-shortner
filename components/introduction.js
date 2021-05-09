@@ -1,9 +1,7 @@
 import {
   Box,
-  Center,
   Container,
   Heading,
-  Text,
   VStack,
   Flex,
   Avatar,
