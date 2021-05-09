@@ -27,7 +27,7 @@ export default function EducationExperienceList(params) {
               <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
               <VStack alignItems="stretch">
                 <Box ml="2">
-                  <Text fontWeight="bold">Educate Program Manager</Text>
+                  <Text fontWeight="bold">B.E in Computer Science</Text>
                   <Text>Nanyang Technological University Singapore</Text>
                   <Text as="i" fontSize="sm">
                     2017/08 - 2021/12 (expected)
