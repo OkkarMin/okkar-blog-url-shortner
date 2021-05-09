@@ -10,10 +10,15 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
+import {
+  EditIcon,
+  DownloadIcon,
+  DragHandleIcon,
+  InfoOutlineIcon,
+} from "@chakra-ui/icons";
 import { useState } from "react";
 import NextLink from "next/link";
 import { server } from "../config";
-import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 
 import WorkExperienceList from "./work_experience_list";
 import EducationExperienceList from "./education_experience_list";
@@ -55,7 +60,7 @@ export default function BioExperienceTabs() {
           >
             <Button
               w="full"
-              rightIcon={<ArrowForwardIcon />}
+              rightIcon={<InfoOutlineIcon />}
               variant="outline"
               onClick={() => setTabIndex(1)}
             >
@@ -63,21 +68,13 @@ export default function BioExperienceTabs() {
             </Button>
 
             <NextLink href={`${server}/blog`}>
-              <Button
-                w="full"
-                rightIcon={<ArrowForwardIcon />}
-                variant="outline"
-              >
+              <Button w="full" rightIcon={<EditIcon />} variant="outline">
                 Blog
               </Button>
             </NextLink>
 
             <NextLink href={`${server}/projects`}>
-              <Button
-                w="full"
-                rightIcon={<ArrowForwardIcon />}
-                variant="outline"
-              >
+              <Button w="full" rightIcon={<DragHandleIcon />} variant="outline">
                 Projects
               </Button>
             </NextLink>
