@@ -1,18 +1,19 @@
 import {
-  Text,
-  Stack,
   Button,
+  Link,
+  Stack,
+  StackDivider,
+  Text,
   Tabs,
   TabList,
   TabPanels,
   Tab,
   TabPanel,
-  StackDivider,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import NextLink from "next/link";
 import { server } from "../config";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 
 import WorkExperienceList from "./work_experience_list";
 import EducationExperienceList from "./education_experience_list";
@@ -86,6 +87,11 @@ export default function BioExperienceTabs() {
         {/* Experience tab panel */}
         <TabPanel>
           <Stack spacing={6}>
+            <Link isExternal href={`${server}/Okkar_Min_Resume.pdf`}>
+              <Button w="full" rightIcon={<DownloadIcon />} variant="outline">
+                Resume
+              </Button>
+            </Link>
             <WorkExperienceList />
             <AchievementExperienceList />
             <EducationExperienceList />
