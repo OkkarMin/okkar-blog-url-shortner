@@ -19,7 +19,7 @@ import EducationExperienceList from "./education_experience_list";
 import AchievementExperienceList from "./achievement_experience_list";
 
 export default function BioExperienceTabs() {
-  const [tabIndex, setTabIndex] = useState(1);
+  const [tabIndex, setTabIndex] = useState(0);
   return (
     <Tabs
       isFitted
