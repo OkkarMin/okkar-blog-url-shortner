@@ -40,8 +40,8 @@ export default function Introduction() {
             <Stack spacing={0} align={"center"} mb={5}>
               <Heading fontSize={"2xl"}>Okkar Min</Heading>
               <ReactRotatingText
-                pause="2000"
-                emptyPause="500"
+                pause={2000}
+                emptyPause={500}
                 items={[
                   "Software Architect",
                   "System Enginner",
