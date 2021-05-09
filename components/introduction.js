@@ -14,7 +14,7 @@ import ReactRotatingText from "react-rotating-text";
 
 import BioExperienceTabs from "./bio_experience_tabs";
 
-export default function Body() {
+export default function Introduction() {
   return (
     <VStack mt={4}>
       <Container>
@@ -53,7 +53,7 @@ export default function Body() {
           </Box>
 
           {/* Bio and experience tabs */}
-          <Box p={4}>
+          <Box>
             <BioExperienceTabs />
           </Box>
         </Box>

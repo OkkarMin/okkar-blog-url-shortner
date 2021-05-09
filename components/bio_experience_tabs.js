@@ -14,8 +14,12 @@ import NextLink from "next/link";
 import { server } from "../config";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
+import WorkExperienceList from "./work_experience_list";
+import EducationExperienceList from "./education_experience_list";
+import AchievementExperienceList from "./achievement_experience_list";
+
 export default function BioExperienceTabs() {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1);
   return (
     <Tabs
       isFitted
@@ -32,7 +36,7 @@ export default function BioExperienceTabs() {
       </TabList>
 
       <TabPanels>
-        {/* Bio tab panel */}
+        {/* Bio tap panel */}
         <TabPanel>
           <Text>
             Hello 👋 I'm Okkar Min, final year computer science student from
@@ -81,7 +85,11 @@ export default function BioExperienceTabs() {
 
         {/* Experience tab panel */}
         <TabPanel>
-          <Text>✏️ in progress</Text>
+          <Stack spacing={6}>
+            <WorkExperienceList />
+            <EducationExperienceList />
+            <AchievementExperienceList />
+          </Stack>
         </TabPanel>
       </TabPanels>
     </Tabs>
