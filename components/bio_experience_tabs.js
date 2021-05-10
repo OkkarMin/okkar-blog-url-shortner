@@ -84,7 +84,7 @@ export default function BioExperienceTabs() {
         {/* Experience tab panel */}
         <TabPanel>
           <Stack spacing={6}>
-            <Link isExternal href={`${server}/Okkar_Min_Resume.pdf`}>
+            <Link isExternal href={`${server}/Okkar_Min_Resume_Public.pdf`}>
               <Button w="full" rightIcon={<DownloadIcon />} variant="outline">
                 Resume
               </Button>
