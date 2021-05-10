@@ -24,7 +24,7 @@ export default function EducationExperienceList(params) {
       </VStack>
       <VStack alignItems="flex-start">
         <Flex direction="column" alignItems="flex-start">
-          {/* AWS */}
+          {/* NTU */}
           <Box m="2">
             <HStack>
               <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
@@ -40,7 +40,7 @@ export default function EducationExperienceList(params) {
             </HStack>
           </Box>
 
-          {/* AStar */}
+          {/* SP */}
           <Box m="2">
             <HStack>
               <Avatar src="https://logo.clearbit.com/sp.edu.sg" />
