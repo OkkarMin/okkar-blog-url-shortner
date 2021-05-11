@@ -1,19 +1,19 @@
-# Blog + URL shortener [okkar.tk](https://okkar.tk) ➡ [okkarmin.github.io](okkarmin.github.io)
+# Blog + URL shortener
 
-- [okkar.tk](https://okkar.tk)
-- [okkar.tk/linkedin](https://okkar.tk/linkedin)
-- [okkar.tk/telegram](https://okkar.tk/telegram)
-- [okkar.tk/github](https://okkar.tk/github)
+- [okkarm.in](https://okkarm.in)
+- [okkarm.in/linkedin](https://okkarm.in/linkedin)
+- [okkarm.in/telegram](https://okkarm.in/telegram)
+- [okkarm.in/github](https://okkarm.in/github)
 
 ## Main features 🚀
 
+- ✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
+- ✅ Track aliases click rate
 - (Work in Progress) Blog/Portfolio
-- Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
-- (Work in Progress) Track aliases click rate
 - (Work in Progress) Dashboard to add/remove/view aliases
 
 ## The Stack 🥞
 
 - NextJs
-- Prisma<?>
 - ChakraUI
+- Firebase (Firestore)
