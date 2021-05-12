@@ -15,7 +15,7 @@ import BioExperienceTabs from "./bio_experience_tabs";
 export default function Introduction() {
   return (
     <Center>
-      <VStack mt={4} maxWidth={["95%", "90%", "70%"]}>
+      <VStack mt={4}>
         <Box w={"full"} boxShadow={"2xl"} rounded={"lg"} overflow={"hidden"}>
           {/* Background and avatar image */}
           <Image
