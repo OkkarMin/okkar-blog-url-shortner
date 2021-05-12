@@ -1,6 +1,6 @@
 import {
   Box,
-  Container,
+  Center,
   Heading,
   VStack,
   Flex,
@@ -14,8 +14,8 @@ import BioExperienceTabs from "./bio_experience_tabs";
 
 export default function Introduction() {
   return (
-    <VStack mt={4}>
-      <Container>
+    <Center>
+      <VStack mt={4} maxWidth={["95%", "65%"]}>
         <Box w={"full"} boxShadow={"2xl"} rounded={"lg"} overflow={"hidden"}>
           {/* Background and avatar image */}
           <Image
@@ -57,7 +57,7 @@ export default function Introduction() {
             <BioExperienceTabs />
           </Box>
         </Box>
-      </Container>
-    </VStack>
+      </VStack>
+    </Center>
   );
 }
