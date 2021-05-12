@@ -6,21 +6,20 @@ import Footer from "../components/footer";
 
 export default function Layout({ children, title }) {
   return (
-    <Center>
+    <Flex direction="column" minHeight="100vh" padding={[2, 4]}>
       <Head>
         <title>{`${title} | Okkar Min`}</title>
       </Head>
 
-      <Flex
-        direction="column"
-        minHeight="100vh"
-        padding={[2, 4]}
-        maxWidth={["95%", "90%", "70%"]}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </Flex>
-    </Center>
+      <Header />
+
+      <Center>
+        <Flex direction="column" maxWidth={["95%", "90%", "70%"]}>
+          {children}
+        </Flex>
+      </Center>
+
+      <Footer />
+    </Flex>
   );
 }
