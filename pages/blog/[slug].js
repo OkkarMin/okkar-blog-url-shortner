@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import {
   Container,
   Code,
@@ -12,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
 const components = {
   h1: (props) => <Heading as="h1" size="xl" {...props} />,
@@ -30,7 +32,7 @@ const components = {
   inlineCode: (props) => <Code {...props} />,
 };
 
-export default function Blog({ source }) {
+export default function BlogPost({ source }) {
   return (
     <Layout title="📝 Blog">
       <Container maxWidth="80ch">
@@ -42,11 +44,38 @@ export default function Blog({ source }) {
   );
 }
 
-export async function getStaticProps() {
-  const POSTS_PATH = path.join(process.cwd(), "mdFiles");
-  const fromFile = fs.readFileSync(path.join(POSTS_PATH, "example.mdx"));
+export async function getStaticProps({ params }) {
+  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const source = fs.readFileSync(postFilePath);
 
-  const mdxSource = await serialize(fromFile);
+  const { content, data } = matter(source);
 
-  return { props: { source: mdxSource } };
+  const mdxSource = await serialize(content, {
+    // Optionally pass remark/rehype plugins
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+    },
+    scope: data,
+  });
+
+  return {
+    props: {
+      source: mdxSource,
+      frontMatter: data,
+    },
+  };
 }
+
+export const getStaticPaths = async () => {
+  const paths = postFilePaths
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.mdx?$/, ""))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
