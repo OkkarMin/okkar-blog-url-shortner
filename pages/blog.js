@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import {
-  Center,
+  Container,
   Code,
   Heading,
   ListItem,
@@ -9,7 +9,7 @@ import {
   Text,
   UnorderedList,
   VStack,
-} from "@chakra-ui/layout";
+} from "@chakra-ui/react";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 
@@ -33,9 +33,11 @@ const components = {
 export default function Blog({ source }) {
   return (
     <Layout title="📝 Blog">
-      <VStack alignItems="flex-start" padding={[2, 4]} spacing="4">
-        <MDXRemote {...source} components={components} />
-      </VStack>
+      <Container maxWidth="80ch">
+        <VStack alignItems="flex-start" spacing="4">
+          <MDXRemote {...source} components={components} />
+        </VStack>
+      </Container>
     </Layout>
   );
 }
