@@ -1,9 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { analytics } from "../lib/firebase";
 import { SEOConfiguration } from "../config";
-import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
+import {
+  Center,
+  ChakraProvider,
+  CSSReset,
+  extendTheme,
+  Spinner,
+  Flex,
+  VStack,
+} from "@chakra-ui/react";
 import "@fontsource/rubik";
 import "@fontsource/karla";
 
@@ -16,6 +24,7 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
@@ -33,12 +42,35 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return (
+  useEffect(() => {
+    document.fonts
+      .load("12px Karla")
+      .then(() =>
+        document.fonts.load("12px Rubik").then(() => setIsReady(true))
+      );
+  }, []);
+
+  return isReady ? (
     <>
       <DefaultSeo {...SEOConfiguration} />
       <ChakraProvider theme={theme}>
         <CSSReset />
         <Component {...pageProps} />
+      </ChakraProvider>
+    </>
+  ) : (
+    <>
+      <DefaultSeo {...SEOConfiguration} />
+      <ChakraProvider theme={theme}>
+        <CSSReset />
+        <VStack
+          height="100vh"
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Spinner size="xl" />
+        </VStack>
       </ChakraProvider>
     </>
   );
