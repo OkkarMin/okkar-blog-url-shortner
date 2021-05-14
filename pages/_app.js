@@ -3,7 +3,16 @@ import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { analytics } from "../lib/firebase";
 import { SEOConfiguration } from "../config";
-import { ChakraProvider, CSSReset } from "@chakra-ui/react";
+import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
+import "@fontsource/rubik";
+import "@fontsource/karla";
+
+const theme = extendTheme({
+  fonts: {
+    heading: "Karla",
+    body: "Rubik",
+  },
+});
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -27,7 +36,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo {...SEOConfiguration} />
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <CSSReset />
         <Component {...pageProps} />
       </ChakraProvider>

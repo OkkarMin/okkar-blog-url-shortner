@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^1.5.1",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/karla": "^4.3.0",
+    "@fontsource/rubik": "^4.3.0",
     "@prisma/client": "^2.21.2",
     "cors": "^2.8.5",
     "firebase": "^8.4.3",
