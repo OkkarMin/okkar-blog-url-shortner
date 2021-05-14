@@ -12,13 +12,13 @@ import {
   Flex,
   VStack,
 } from "@chakra-ui/react";
-import "@fontsource/rubik";
 import "@fontsource/karla";
+import "@fontsource/open-sans";
 
 const theme = extendTheme({
   fonts: {
     heading: "Karla",
-    body: "Rubik",
+    body: "Open Sans",
   },
 });
 
