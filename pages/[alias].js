@@ -1,9 +1,9 @@
 import useSWR from "swr";
 import { server } from "../config";
 import { useRouter } from "next/router";
-import AliasError from "../components/alias_error";
-import AliasRedirect from "../components/alias_redirect";
-import AliasLoading from "../components/alias_loading";
+import AliasError from "../components/alias/alias_error";
+import AliasRedirect from "../components/alias/alias_redirect";
+import AliasLoading from "../components/alias/alias_loading";
 
 export default function Alias() {
   const { alias } = useRouter().query;
