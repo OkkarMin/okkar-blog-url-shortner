@@ -10,6 +10,7 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
@@ -32,13 +33,14 @@ const components = {
   code: (props) => <Code {...props} />,
   pre: (props) => <Code {...props} />,
   inlineCode: (props) => <Code {...props} />,
+  Image,
 };
 
 export default function BlogPost({ source }) {
   return (
     <Layout title="📝 Blog">
       <Container100Ch>
-        <VStack alignItems="flex-start" spacing="6">
+        <VStack mt="4" alignItems="flex-start" spacing="6">
           <MDXRemote {...source} components={components} />
         </VStack>
       </Container100Ch>
