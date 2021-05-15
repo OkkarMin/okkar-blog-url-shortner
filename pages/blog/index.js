@@ -2,15 +2,16 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import NextLink from "next/link";
-import { Container, ListItem, Link, UnorderedList } from "@chakra-ui/react";
+import { ListItem, Link, UnorderedList } from "@chakra-ui/react";
 import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
 import Layout from "../../components/layout";
+import Container100Ch from "../../components/layout/container";
 
 export default function Blog({ posts }) {
   return (
     <Layout title="📝 Blog">
-      <Container maxWidth="80ch">
+      <Container100Ch>
         <UnorderedList>
           {posts.map((post) => (
             <NextLink
@@ -23,7 +24,7 @@ export default function Blog({ posts }) {
             </NextLink>
           ))}
         </UnorderedList>
-      </Container>
+      </Container100Ch>
     </Layout>
   );
 }

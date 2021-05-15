@@ -7,15 +7,15 @@ import {
   Avatar,
   Stack,
   Image,
-  Container,
 } from "@chakra-ui/react";
 import ReactRotatingText from "react-rotating-text";
 
 import BioExperienceTabs from "./bio_experience_tabs";
+import Container100Ch from "../components/layout/container";
 
 export default function Introduction() {
   return (
-    <Container maxWidth="80ch">
+    <Container100Ch>
       <VStack mt={4}>
         <Box w={"full"} boxShadow={"2xl"} rounded={"lg"} overflow={"hidden"}>
           {/* Background and avatar image */}
@@ -59,6 +59,6 @@ export default function Introduction() {
           </Box>
         </Box>
       </VStack>
-    </Container>
+    </Container100Ch>
   );
 }

@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import {
-  Container,
   Code,
   Heading,
   ListItem,
@@ -17,6 +16,7 @@ import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
 import Layout from "../../components/layout";
 import BlogPostLink from "../../components/blog_post_link";
+import Container100Ch from "../../components/layout/container";
 
 const components = {
   h1: (props) => <Heading as="h1" size="xl" {...props} />,
@@ -37,11 +37,11 @@ const components = {
 export default function BlogPost({ source }) {
   return (
     <Layout title="📝 Blog">
-      <Container maxWidth="80ch">
+      <Container100Ch>
         <VStack alignItems="flex-start" spacing="6">
           <MDXRemote {...source} components={components} />
         </VStack>
-      </Container>
+      </Container100Ch>
     </Layout>
   );
 }
