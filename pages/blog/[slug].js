@@ -38,7 +38,7 @@ export default function BlogPost({ source }) {
   return (
     <Layout title="📝 Blog">
       <Container maxWidth="80ch">
-        <VStack alignItems="flex-start" spacing="4">
+        <VStack alignItems="flex-start" spacing="6">
           <MDXRemote {...source} components={components} />
         </VStack>
       </Container>
