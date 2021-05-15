@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Center, Flex } from "@chakra-ui/react";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "./header";
+import Footer from "./footer";
 
 export default function Layout({ children, title }) {
   return (

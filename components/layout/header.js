@@ -1,4 +1,4 @@
-import { server } from "../config";
+import { server } from "../../config";
 import NextLink from "next/link";
 import { Button, HStack, IconButton, Link } from "@chakra-ui/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";

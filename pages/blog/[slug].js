@@ -14,7 +14,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/layout";
 import BlogPostLink from "../../components/blog_post_link";
 import Container100Ch from "../../components/layout/container";
 

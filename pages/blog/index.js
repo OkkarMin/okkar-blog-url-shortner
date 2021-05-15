@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import { ListItem, Link, UnorderedList } from "@chakra-ui/react";
 import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/layout";
 import Container100Ch from "../../components/layout/container";
 
 export default function Blog({ posts }) {
