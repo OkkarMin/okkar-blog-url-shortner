@@ -19,7 +19,7 @@ export default function WorkExperienceList(params) {
       <VStack mt={["0", "4"]}>
         <Center minWidth="6.5em">
           <VStack>
-            <Heading fontSize="md">Work‍</Heading>
+            <Heading fontSize="md">Work</Heading>
             <Heading fontSize="md">👨🏻‍💻‍</Heading>
           </VStack>
         </Center>

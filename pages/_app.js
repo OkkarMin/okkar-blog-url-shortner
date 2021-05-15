@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
     document.fonts
       .load("12px Karla")
       .then(() =>
-        document.fonts.load("12px Rubik").then(() => setIsReady(true))
+        document.fonts.load("12px Inter").then(() => setIsReady(true))
       );
   }, []);
 
