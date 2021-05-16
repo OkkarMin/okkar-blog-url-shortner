@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { analytics } from "../lib/firebase";
-import { SEOConfiguration } from "../config";
+import { analytics } from "lib/firebase";
+import { SEOConfiguration } from "config";
 import {
   Center,
   ChakraProvider,

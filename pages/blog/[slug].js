@@ -13,11 +13,11 @@ import {
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
+import { postFilePaths, POSTS_PATH } from "lib/mdxUtils";
 
-import Layout from "../../components/layout/layout";
-import BlogPostLink from "../../components/blog_post_link";
-import Container100Ch from "../../components/layout/container";
+import Layout from "components/layout/layout";
+import BlogPostLink from "components/blog_post_link";
+import Container100Ch from "components/layout/container";
 
 const components = {
   h1: (props) => <Heading as="h1" size="xl" {...props} />,

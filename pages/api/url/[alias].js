@@ -1,7 +1,7 @@
 import Cors from "cors";
-import { server } from "../../../config";
-import db from "../../../lib/db";
-import initMiddleware from "../../../lib/init-middleware";
+import { server } from "config";
+import db from "lib/db";
+import initMiddleware from "lib/init-middleware";
 
 // Initialize the cors middleware
 const cors = initMiddleware(

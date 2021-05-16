@@ -2,12 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import NextLink from "next/link";
-import { server } from "../../config";
+import { server } from "config";
 import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
+import { postFilePaths, POSTS_PATH } from "lib/mdxUtils";
 
-import Layout from "../../components/layout/layout";
-import Container100Ch from "../../components/layout/container";
+import Layout from "components/layout/layout";
+import Container100Ch from "components/layout/container";
 
 export default function Blog({ posts }) {
   return (
