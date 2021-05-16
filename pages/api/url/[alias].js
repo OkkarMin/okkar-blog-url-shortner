@@ -1,6 +1,6 @@
 import Cors from "cors";
 import { server } from "config";
-import db from "lib/db";
+import { firestore } from "lib/firebase";
 import initMiddleware from "lib/init-middleware";
 
 // Initialize the cors middleware
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
   const { alias } = req.query;
 
-  const result = await db.collection("alias").doc(alias).get();
+  const result = await firestore.collection("alias").doc(alias).get();
 
   try {
     const { url } = result.data();
