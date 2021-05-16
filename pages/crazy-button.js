@@ -82,15 +82,15 @@ export default function CrazyButtonPage() {
             <Table variant="simple">
               <Tbody>
                 <Tr>
-                  <Text>Current catchers :</Text>
+                  <Text>Current catchers : </Text>
                 </Tr>
                 <Tr>
                   <Td>🛠 in progress</Td>
                 </Tr>
+                <Tr>
+                  <Td>🤡 has been caught {caughtCount} times</Td>
+                </Tr>
               </Tbody>
-              <TableCaption>
-                🤡 has been caught {caughtCount} times
-              </TableCaption>
             </Table>
           </Box>
         </Portal>
