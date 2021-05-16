@@ -1,6 +1,17 @@
 import Head from "next/head";
 import { useRef, useState, useEffect } from "react";
-import { Box, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Portal,
+  Table,
+  Tbody,
+  Text,
+  Tr,
+  Td,
+  TableCaption,
+} from "@chakra-ui/react";
+
 import useWindowDimensions from "hooks/useWindowDimensions";
 import { firestore } from "lib/firebase";
 
@@ -8,28 +19,41 @@ export default function CrazyButtonPage() {
   const { height, width } = useWindowDimensions();
   const [buttonTop, setButtonTop] = useState(0);
   const [buttonLeft, setButtonLeft] = useState(0);
+  const [caughtCount, setCaughtCount] = useState(0);
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    const unsubscribe = firestore
+    const unsubscribeButtonLocation = firestore
       .collection("button")
       .doc("buttonLocation")
       .onSnapshot((doc) => {
         moveToLocation(doc.data().randomTop, doc.data().randomLeft);
       });
 
+    const unsubscribeCaughtCount = firestore
+      .collection("button")
+      .doc("caughtCount")
+      .onSnapshot((doc) => {
+        setCaughtCount(doc.data().count);
+      });
+
     return function cleanup() {
-      unsubscribe();
+      unsubscribeButtonLocation();
+      unsubscribeCaughtCount();
     };
   }, []);
 
   function goCrazy() {
     const randomTop = Math.random();
     const randomLeft = Math.random();
-
     firestore.collection("button").doc("buttonLocation").set({
       randomTop,
       randomLeft,
+    });
+
+    setCaughtCount(caughtCount + 1);
+    firestore.doc("button/caughtCount").set({
+      count: caughtCount,
     });
   }
 
@@ -53,6 +77,23 @@ export default function CrazyButtonPage() {
       </Head>
 
       <Box>
+        <Portal>
+          <Box mt="-10" p="2" width="md">
+            <Table variant="simple">
+              <Tbody>
+                <Tr>
+                  <Text>Current catchers :</Text>
+                </Tr>
+                <Tr>
+                  <Td>🛠 in progress</Td>
+                </Tr>
+              </Tbody>
+              <TableCaption>
+                🤡 has been caught {caughtCount} times
+              </TableCaption>
+            </Table>
+          </Box>
+        </Portal>
         <Button
           colorScheme="red"
           left={buttonLeft}
