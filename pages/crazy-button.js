@@ -9,11 +9,12 @@ import {
   Text,
   Tr,
   Td,
-  TableCaption,
+  Spinner,
 } from "@chakra-ui/react";
 
 import useWindowDimensions from "hooks/useWindowDimensions";
 import { firestore } from "lib/firebase";
+import Layout from "components/layout/layout";
 
 export default function CrazyButtonPage() {
   const { height, width } = useWindowDimensions();
@@ -23,18 +24,18 @@ export default function CrazyButtonPage() {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    const unsubscribeButtonLocation = firestore
-      .collection("button")
-      .doc("buttonLocation")
-      .onSnapshot((doc) => {
-        moveToLocation(doc.data().randomTop, doc.data().randomLeft);
-      });
-
     const unsubscribeCaughtCount = firestore
       .collection("button")
       .doc("caughtCount")
       .onSnapshot((doc) => {
         setCaughtCount(doc.data().count);
+      });
+
+    const unsubscribeButtonLocation = firestore
+      .collection("button")
+      .doc("buttonLocation")
+      .onSnapshot((doc) => {
+        moveToLocation(doc.data().randomTop, doc.data().randomLeft);
       });
 
     return function cleanup() {
@@ -68,6 +69,14 @@ export default function CrazyButtonPage() {
     // Update the button location
     setButtonTop(newButtonTop);
     setButtonLeft(newButtonLeft);
+  }
+
+  if (caughtCount == 0) {
+    return (
+      <Layout title="🤪 Crazy Button">
+        <Spinner size="lg" />
+      </Layout>
+    );
   }
 
   return (
