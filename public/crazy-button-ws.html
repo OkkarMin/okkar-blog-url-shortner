@@ -93,7 +93,7 @@
 
   <!-- start of socket logic -->
   <script>
-    const socket = io.connect("http://localhost:8080");
+    const socket = io.connect("http://15.165.115.174:8080");
 
     // new player connected
     socket.on("player_connected", (data) => {
@@ -119,8 +119,6 @@
         id="button"
         class="
           absolute
-          right-0
-          flex-auto
           bg-red-500
           hover:bg-red-400
           text-white
