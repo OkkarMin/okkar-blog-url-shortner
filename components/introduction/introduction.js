@@ -11,7 +11,7 @@ import {
 import ReactRotatingText from "react-rotating-text";
 
 import BioExperienceTabs from "./bio_experience_tabs";
-import Container100Ch from "../components/layout/container";
+import Container100Ch from "components/layout/container";
 
 export default function Introduction() {
   return (

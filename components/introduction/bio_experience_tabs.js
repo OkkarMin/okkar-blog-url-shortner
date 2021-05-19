@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/icons";
 import { useState } from "react";
 import NextLink from "next/link";
-import { server } from "../config";
+import { server } from "config";
 
 import WorkExperienceList from "./work_experience_list";
 import EducationExperienceList from "./education_experience_list";
