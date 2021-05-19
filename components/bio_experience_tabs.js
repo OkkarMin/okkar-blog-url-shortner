@@ -50,7 +50,11 @@ export default function BioExperienceTabs() {
           </Text>
           <Text mt={4}>
             "To automate or not to automate, that is the question". I enjoy
-            discussing on technology and its trade-offs.
+            discussing about technology and its trade-offs.
+          </Text>
+          <Text mt={4}>
+            Drop me a note if you would like to collaborate on a project
+            together. Will help in anyway I could!
           </Text>
 
           <Stack
