@@ -3,12 +3,12 @@ import {
   Link,
   Stack,
   StackDivider,
-  Text,
-  Tabs,
-  TabList,
-  TabPanels,
   Tab,
+  TabList,
   TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
 } from "@chakra-ui/react";
 import {
   EditIcon,
