@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Link,
   Stack,
@@ -46,16 +47,19 @@ export default function BioExperienceTabs() {
         <TabPanel>
           <Text>
             Hello 👋 I'm Okkar Min, final year computer science student from
-            Nanyang Technological University.
-          </Text>
-          <Text mt={4}>
-            "To automate or not to automate, that is the question". I enjoy
-            discussing about technology and its trade-offs.
+            Nanyang Technological University. I enjoy discussing about
+            technology, how it could be used to solve business use-cases and its
+            trade offs.
           </Text>
           <Text mt={4}>
             Drop me a note if you would like to collaborate on a project
             together. Will help in anyway I could!
           </Text>
+          <Box textAlign="center" mt="4">
+            <Text as="em">
+              "To automate or not to automate, that is the question"
+            </Text>
+          </Box>
 
           <Stack
             mt={6}
