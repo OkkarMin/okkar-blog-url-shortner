@@ -36,10 +36,7 @@ export default function BioExperienceTabs() {
     >
       <TabList mb={4}>
         <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>Bio</Tab>
-        <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>
-          {" "}
-          Experience{" "}
-        </Tab>
+        <Tab _selected={{ fontWeight: "bold", bg: "gray.100" }}>Experience</Tab>
       </TabList>
 
       <TabPanels>
