@@ -1,12 +1,4 @@
-import {
-  Box,
-  Heading,
-  VStack,
-  Flex,
-  Avatar,
-  Stack,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Heading, Flex, Avatar, Stack, Image } from "@chakra-ui/react";
 import ReactRotatingText from "react-rotating-text";
 import { motion } from "framer-motion";
 
