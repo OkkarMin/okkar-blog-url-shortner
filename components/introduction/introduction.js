@@ -55,9 +55,9 @@ export default function Introduction() {
               pause={2000}
               emptyPause={500}
               items={[
-                "Software Architect",
-                "System Enginner",
                 "Software Developer",
+                "System Enginner",
+                "Software Architect",
                 "IOT Enthusiast",
               ]}
             />
