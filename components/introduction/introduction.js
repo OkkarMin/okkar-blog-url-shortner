@@ -1,6 +1,5 @@
 import {
   Box,
-  Center,
   Heading,
   VStack,
   Flex,
@@ -9,16 +8,23 @@ import {
   Image,
 } from "@chakra-ui/react";
 import ReactRotatingText from "react-rotating-text";
+import { motion } from "framer-motion";
 
 import BioExperienceTabs from "./bio_experience_tabs";
 import Container100Ch from "components/layout/container";
 
+const MotionBox = motion(Box);
+
 export default function Introduction() {
   return (
     <Container100Ch>
-      <VStack mt={4}>
-        <Box w={"full"} boxShadow={"2xl"} rounded={"lg"} overflow={"hidden"}>
-          {/* Background and avatar image */}
+      <Box mt="4" w={"full"} boxShadow="xl" rounded={"lg"} overflow={"hidden"}>
+        {/* Background and avatar image */}
+        <MotionBox
+          initial={{ y: "-100vh" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <Image
             h={"120px"}
             w={"full"}
@@ -35,30 +41,38 @@ export default function Introduction() {
               bg="white"
             />
           </Flex>
+        </MotionBox>
 
-          {/* Name and rotating text */}
-          <Box>
-            <Stack spacing={0} align={"center"} mb={5}>
-              <Heading fontSize={"2xl"}>Okkar Min</Heading>
-              <ReactRotatingText
-                pause={2000}
-                emptyPause={500}
-                items={[
-                  "Software Architect",
-                  "System Enginner",
-                  "Software Developer",
-                  "IOT Enthusiast",
-                ]}
-              />
-            </Stack>
-          </Box>
+        {/* Name and rotating text */}
+        <MotionBox
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <Stack spacing={0} align={"center"} mb={5}>
+            <Heading fontSize={"2xl"}>Okkar Min</Heading>
+            <ReactRotatingText
+              pause={2000}
+              emptyPause={500}
+              items={[
+                "Software Architect",
+                "System Enginner",
+                "Software Developer",
+                "IOT Enthusiast",
+              ]}
+            />
+          </Stack>
+        </MotionBox>
 
-          {/* Bio and experience tabs */}
-          <Box>
-            <BioExperienceTabs />
-          </Box>
-        </Box>
-      </VStack>
+        {/* Bio and experience tabs */}
+        <MotionBox
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
+          <BioExperienceTabs />
+        </MotionBox>
+      </Box>
     </Container100Ch>
   );
 }
