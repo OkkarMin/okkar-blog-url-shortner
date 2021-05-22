@@ -54,7 +54,7 @@ export default function BioExperienceTabs() {
           </Text>
           <Box textAlign="center" mt="4">
             <Text as="em">
-              "To automate or not to automate, that is the question"
+              "Everything should be made as simple as possible, but not simpler"
             </Text>
           </Box>
 
