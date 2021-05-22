@@ -29,11 +29,11 @@ export default function Header() {
         <NextLink href={`${server}/`}>
           <Button variant="ghost">Home</Button>
         </NextLink>
-        <NextLink href={`${server}/blog`}>
-          <Button variant="ghost">Blog</Button>
-        </NextLink>
         <NextLink href={`${server}/projects`}>
           <Button variant="ghost">Projects</Button>
+        </NextLink>
+        <NextLink href={`${server}/blog`}>
+          <Button variant="ghost">Blog</Button>
         </NextLink>
       </HStack>
     </HStack>

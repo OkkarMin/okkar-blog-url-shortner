@@ -72,15 +72,15 @@ export default function BioExperienceTabs() {
               Experience
             </Button>
 
-            <NextLink href={`${server}/blog`}>
-              <Button w="full" rightIcon={<EditIcon />} variant="outline">
-                Blog
-              </Button>
-            </NextLink>
-
             <NextLink href={`${server}/projects`}>
               <Button w="full" rightIcon={<DragHandleIcon />} variant="outline">
                 Projects
+              </Button>
+            </NextLink>
+
+            <NextLink href={`${server}/blog`}>
+              <Button w="full" rightIcon={<EditIcon />} variant="outline">
+                Blog
               </Button>
             </NextLink>
           </Stack>
