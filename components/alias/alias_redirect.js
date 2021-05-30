@@ -9,12 +9,12 @@ export default function AliasRedirect({ to_url }) {
   async function waitHalfSecond() {
     setTimeout(() => {
       router.push(to_url);
-    }, 500);
+    }, 200);
   }
 
   useEffect(() => {
     waitHalfSecond();
-  });
+  }, []);
 
   return (
     <Flex h="100vh" alignItems="center" justifyContent="center">
