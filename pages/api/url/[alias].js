@@ -15,9 +15,6 @@ const cors = initMiddleware(
 export default async function handler(req, res) {
   await cors(req, res);
 
-  // cache response for 24hours
-  res.setHeader("Cache-Control", "max-age=0, s-maxage=86400");
-
   const { alias } = req.query;
 
   const result = await firestore.collection("alias").doc(alias).get();

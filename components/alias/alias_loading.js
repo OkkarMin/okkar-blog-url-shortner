@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Spinner, VStack } from "@chakra-ui/react";
 
 export default function AliasLoading({ alias }) {
   return (
-    <Flex h="100vh" alignItems="center" justifyContent="center">
+    <Flex h="100vh" w="100vw" alignItems="center" justifyContent="center">
       <VStack>
         <Spinner />
         <Heading as="h3" size="lg">
