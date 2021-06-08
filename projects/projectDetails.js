@@ -12,6 +12,24 @@ const projectDetails = [
     },
   },
   {
+    title: "TrashHeroes",
+    description:
+      "Automated waste sorter that utilizes artificial intelligence to significantly reduce contamination of recyclables",
+    imageUrl: "/static/images/projects/trashheroes.gif",
+    language: "Python",
+    technology: [
+      "Raspberry Pi",
+      "Tensorflow",
+      "Hardware",
+      "Machine Learning",
+      "Hackathon",
+    ],
+    links: {
+      GitHub: "https://github.com/OkkarMin/okkar-blog-url-shortner",
+      Youtube: "https://www.youtube.com/watch?v=vrjFZZSnsug",
+    },
+  },
+  {
     title: "OkkarM.in",
     description:
       "Personal portfolio site built using NextJS. Showcase of my projects, a place for me to jot down my thoughts and also act as URL shortener",
