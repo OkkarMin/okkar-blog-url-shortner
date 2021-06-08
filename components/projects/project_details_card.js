@@ -49,16 +49,19 @@ export default function ProjectDetailsCard({ isFirst, details }) {
           {details.description}
 
           <HStack mt="4">
-            <Text>
-              <Link isExternal href={details.links.app} color="red.500">
-                App <ExternalLinkIcon mx="2px" />
-              </Link>
-            </Text>
-            <Text>
-              <Link isExternal href={details.links.github} color="red.500">
-                GitHub <ExternalLinkIcon mx="2px" />
-              </Link>
-            </Text>
+            {Object.keys(details.links).map((linkName) => {
+              return (
+                <Text>
+                  <Link
+                    isExternal
+                    href={details.links[linkName]}
+                    color="red.500"
+                  >
+                    {linkName} <ExternalLinkIcon mx="2px" />
+                  </Link>
+                </Text>
+              );
+            })}
           </HStack>
         </Box>
       </Box>
