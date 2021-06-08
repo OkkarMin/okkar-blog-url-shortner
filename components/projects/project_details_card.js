@@ -18,7 +18,7 @@ export default function ProjectDetailsCard({ isFirst, details }) {
       mt="6"
       _hover={{ boxShadow: "xl" }}
     >
-      <Image src={details.imageUrl} alt={details.title} />
+      <Image src={details.imageUrl} alt={details.title} width="full" />
 
       <Box p="6">
         <Box fontWeight="semibold" as="h4">
