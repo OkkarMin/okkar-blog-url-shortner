@@ -23,9 +23,9 @@ export default function AchievementExperienceList(params) {
         </Center>
       </VStack>
       <VStack alignItems="flex-start">
-        <Flex direction="column" alignItems="flex-start">
+        <Flex direction="column" alignItems="flex-start" ml="4">
           {/* SAS */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/elementaltechnologies.com" />
               <VStack alignItems="stretch">
@@ -41,7 +41,7 @@ export default function AchievementExperienceList(params) {
           </Box>
 
           {/* CPF */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/cpf.gov.sg" />
               <VStack alignItems="stretch">
@@ -57,7 +57,7 @@ export default function AchievementExperienceList(params) {
           </Box>
 
           {/* 24Hackathon NTU */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
               <VStack alignItems="stretch">

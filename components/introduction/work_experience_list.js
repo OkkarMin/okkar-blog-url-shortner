@@ -25,9 +25,9 @@ export default function WorkExperienceList(params) {
         </Center>
       </VStack>
       <VStack alignItems="flex-start">
-        <Flex direction="column" alignItems="flex-start">
+        <Flex direction="column" alignItems="flex-start" ml="4">
           {/* AWS */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/elementaltechnologies.com" />
               <VStack alignItems="stretch">
@@ -59,7 +59,7 @@ export default function WorkExperienceList(params) {
           </Box>
 
           {/* AStar */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/a-star.edu.sg" />
               <VStack alignItems="stretch">
@@ -88,7 +88,7 @@ export default function WorkExperienceList(params) {
           </Box>
 
           {/* NTU */}
-          <Box m="2">
+          <Box mb="8">
             <HStack>
               <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
               <VStack alignItems="stretch">
