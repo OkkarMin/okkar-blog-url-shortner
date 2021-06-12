@@ -33,3 +33,6 @@ yarn-error.log*
 
 # firebase service account key
 serviceAccountKey.json
+
+# public files
+public/sitemap.xml
