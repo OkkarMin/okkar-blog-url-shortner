@@ -1,4 +1,12 @@
-import { Link, Box, HStack, Image, Badge, Text } from "@chakra-ui/react";
+import {
+  Link,
+  Box,
+  HStack,
+  Image,
+  Badge,
+  Text,
+  Divider,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const languageColors = {
@@ -24,7 +32,8 @@ export default function ProjectDetailsCard({ isFirst, details }) {
         <Box fontWeight="semibold" as="h4">
           {details.title}
         </Box>
-        <Box w="full" h="0.4" mt="4" background="black" />
+
+        <Divider />
 
         <Box mt="2">
           <Badge px="2" colorScheme={languageColors[details.language]}>
@@ -43,9 +52,9 @@ export default function ProjectDetailsCard({ isFirst, details }) {
           ))}
         </Box>
 
-        <Box w="full" h="0.4" mt="2" background="black" />
+        <Divider />
 
-        <Box as="p" px="3" pt="3">
+        <Box as="p" pt="3">
           {details.description}
 
           <HStack mt="4">
