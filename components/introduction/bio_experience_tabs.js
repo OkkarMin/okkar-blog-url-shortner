@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -17,7 +18,6 @@ import {
   DragHandleIcon,
   InfoOutlineIcon,
 } from "@chakra-ui/icons";
-import { useState } from "react";
 import NextLink from "next/link";
 import { server } from "config";
 
@@ -97,6 +97,12 @@ export default function BioExperienceTabs() {
             <WorkExperienceList />
             <AchievementExperienceList />
             <EducationExperienceList />
+
+            <NextLink href={`${server}/projects`}>
+              <Button w="full" rightIcon={<DragHandleIcon />} variant="outline">
+                Projects
+              </Button>
+            </NextLink>
           </Stack>
         </TabPanel>
       </TabPanels>
