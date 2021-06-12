@@ -1,4 +1,4 @@
-import { Flex, Heading, Spinner, VStack, Container } from "@chakra-ui/react";
+import { Flex, Text, Spinner, VStack, Container } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -19,13 +19,11 @@ export default function AliasRedirect({ to_url }) {
     <Flex h="100vh" w="100vw" alignItems="center" justifyContent="center">
       <VStack>
         <Spinner />
-        <Heading as="h3" size="lg">
-          redirecting to{" "}
-        </Heading>
+        <Text fontSize="2xl">redirecting to </Text>
         <Container maxW="100vw" textAlign="center">
-          <Heading as="h3" size="lg" textColor="red.500">
+          <Text fontSize="2xl" textColor="red.500">
             {to_url}
-          </Heading>
+          </Text>
         </Container>
         <svg
           id="a5349118-8809-40c5-ab34-fa23ee5ede74"

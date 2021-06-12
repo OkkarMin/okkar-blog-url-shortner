@@ -1,14 +1,10 @@
-import { Container, Center, VStack, Flex, Heading } from "@chakra-ui/react";
+import { Center, VStack, Flex, Text } from "@chakra-ui/react";
 
 export default function AliasEror({ error_message }) {
   return (
     <Flex h="100vh" w="100vw" alignItems="center" justifyContent="center">
       <VStack>
-        <Container maxW="100vw">
-          <Heading as="h3" size="lg">
-            {error_message}
-          </Heading>
-        </Container>
+        <Text fontSize="2xl">{error_message}</Text>
         <Center marginTop="6">
           <svg
             id="fd59ce54-f850-4dfc-bc34-dd7d379d600e"
