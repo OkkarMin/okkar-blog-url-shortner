@@ -7,7 +7,7 @@ import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    heading: "Poppins",
+    heading: "Baloo 2",
     body: "Baloo 2",
   },
 });
