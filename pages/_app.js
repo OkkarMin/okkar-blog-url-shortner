@@ -1,17 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { analytics } from "lib/firebase";
 import { SEOConfiguration } from "config";
-import {
-  Center,
-  ChakraProvider,
-  CSSReset,
-  extendTheme,
-  Spinner,
-  Flex,
-  VStack,
-} from "@chakra-ui/react";
+import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 import "@fontsource/karla";
 import "@fontsource/inter";
 
