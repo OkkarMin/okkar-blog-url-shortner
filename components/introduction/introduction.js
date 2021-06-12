@@ -1,22 +1,15 @@
 import { Box, Heading, Flex, Avatar, Stack, Image } from "@chakra-ui/react";
 import ReactRotatingText from "react-rotating-text";
-import { motion } from "framer-motion";
 
-import BioExperienceTabs from "./bio_experience_tabs";
+import BioExperienceTabs from "components/introduction/bio_experience_tabs";
 import Container100Ch from "components/layout/container";
-
-const MotionBox = motion(Box);
 
 export default function Introduction() {
   return (
     <Container100Ch>
       <Box mt="4" w={"full"} boxShadow="xl" rounded={"lg"} overflow={"hidden"}>
         {/* Background and avatar image */}
-        <MotionBox
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1 }}
-        >
+        <Box>
           <Image
             h={"120px"}
             w={"full"}
@@ -33,14 +26,10 @@ export default function Introduction() {
               bg="white"
             />
           </Flex>
-        </MotionBox>
+        </Box>
 
         {/* Name and rotating text */}
-        <MotionBox
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        <Box>
           <Stack spacing={0} align={"center"} mb={5}>
             <Heading fontSize={"2xl"}>Okkar Min</Heading>
             <ReactRotatingText
@@ -54,16 +43,12 @@ export default function Introduction() {
               ]}
             />
           </Stack>
-        </MotionBox>
+        </Box>
 
         {/* Bio and experience tabs */}
-        <MotionBox
-          initial={{ x: "100vw" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
+        <Box>
           <BioExperienceTabs />
-        </MotionBox>
+        </Box>
       </Box>
     </Container100Ch>
   );
