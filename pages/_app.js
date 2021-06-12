@@ -24,7 +24,6 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
@@ -42,35 +41,12 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  useEffect(() => {
-    document.fonts
-      .load("12px Karla")
-      .then(() =>
-        document.fonts.load("12px Inter").then(() => setIsReady(true))
-      );
-  }, []);
-
-  return isReady ? (
+  return (
     <>
       <DefaultSeo {...SEOConfiguration} />
       <ChakraProvider theme={theme}>
         <CSSReset />
         <Component {...pageProps} />
-      </ChakraProvider>
-    </>
-  ) : (
-    <>
-      <DefaultSeo {...SEOConfiguration} />
-      <ChakraProvider theme={theme}>
-        <CSSReset />
-        <VStack
-          height="100vh"
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Spinner size="xl" />
-        </VStack>
       </ChakraProvider>
     </>
   );
