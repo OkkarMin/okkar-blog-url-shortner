@@ -8,7 +8,7 @@ export const SEOConfiguration = {
     type: "website",
     url: "https://okkarm.in",
     title: "Okkar Min - Tinkerer, Developer, Occasional writer",
-    description: "Okkar Min shares his thoughts!",
+    description="Okkar Min writes about his thoughts on current technology landscape",
     defaultTitle: "Okkar Min - Tinkerer, Developer, Occasional writer",
     images: [
       {
