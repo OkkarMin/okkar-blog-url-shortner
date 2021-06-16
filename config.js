@@ -3,8 +3,9 @@ const dev = process.env.NODE_ENV !== "production";
 export const server = dev ? "http://localhost:3000" : "https://okkarm.in";
 
 export const SEOConfiguration = {
-  description="Okkar Min writes about his thoughts on current technology landscape",
-  canonical="https://okkarm.in",
+  description:
+    "Okkar Min writes about his thoughts on current technology landscape",
+  canonical: "https://okkarm.in",
   openGraph: {
     locale: "en_IE",
     type: "website",
