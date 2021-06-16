@@ -1,8 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-    strictPostcssConfiguration: true,
-  },
   reactStrictMode: true,
   async headers() {
     return [
@@ -30,7 +26,7 @@ const ContentSecurityPolicy = `
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self';
+  font-src fonts.gstatic.com self;
 `;
 
 const securityHeaders = [
