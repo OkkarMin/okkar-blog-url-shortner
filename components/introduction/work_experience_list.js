@@ -29,7 +29,10 @@ export default function WorkExperienceList(params) {
           {/* AWS */}
           <Box mb="8">
             <HStack>
-              <Avatar src="https://logo.clearbit.com/elementaltechnologies.com" />
+              <Avatar
+                src="https://logo.clearbit.com/elementaltechnologies.com"
+                name="Amazon Web Services"
+              />
               <VStack alignItems="stretch">
                 <Box ml="2">
                   <Text fontWeight="bold">Educate Program Manager</Text>
@@ -61,7 +64,10 @@ export default function WorkExperienceList(params) {
           {/* AStar */}
           <Box mb="8">
             <HStack>
-              <Avatar src="https://logo.clearbit.com/a-star.edu.sg" />
+              <Avatar
+                src="https://logo.clearbit.com/a-star.edu.sg"
+                name="Agency for Science, Technology and Research"
+              />
               <VStack alignItems="stretch">
                 <Box ml="2">
                   <Text fontWeight="bold">
@@ -90,7 +96,10 @@ export default function WorkExperienceList(params) {
           {/* NTU */}
           <Box mb="8">
             <HStack>
-              <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
+              <Avatar
+                src="https://logo.clearbit.com/ntu.edu.sg"
+                name="Nanyang Technological University Singapore"
+              />
               <VStack alignItems="stretch">
                 <Box ml="2">
                   <Text fontWeight="bold">Outreach Workshop Instructor</Text>

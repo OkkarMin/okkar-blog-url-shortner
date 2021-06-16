@@ -27,7 +27,10 @@ export default function EducationExperienceList(params) {
           {/* NTU */}
           <Box mb="8">
             <HStack>
-              <Avatar src="https://logo.clearbit.com/ntu.edu.sg" />
+              <Avatar
+                src="https://logo.clearbit.com/ntu.edu.sg"
+                name="Nanyang Technological University Singapore"
+              />
               <VStack alignItems="stretch">
                 <Box ml="2">
                   <Text fontWeight="bold">B.E in Computer Science</Text>
@@ -43,7 +46,10 @@ export default function EducationExperienceList(params) {
           {/* SP */}
           <Box mb="8">
             <HStack>
-              <Avatar src="https://logo.clearbit.com/sp.edu.sg" />
+              <Avatar
+                src="https://logo.clearbit.com/sp.edu.sg"
+                name="Singapore Polytechnic"
+              />
               <VStack alignItems="stretch">
                 <Box ml="2">
                   <Text fontWeight="bold">Diploma in Marine Engineering</Text>
