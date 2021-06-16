@@ -17,12 +17,13 @@ export default function Introduction() {
               "https://images.unsplash.com/photo-1615192232476-758a110dac9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80"
             }
             objectFit={"cover"}
+            alt="Okkar Min's introduciton background image"
           />
           <Flex justify={"center"} mt={-12}>
             <Avatar
               size={"xl"}
               src={"https://avatars.githubusercontent.com/u/24297303?v=4"}
-              alt={"Okkar Min"}
+              alt={"Okkar Min's headshot"}
               bg="white"
             />
           </Flex>
