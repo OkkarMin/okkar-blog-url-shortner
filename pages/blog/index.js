@@ -21,8 +21,11 @@ export default function Blog({ posts }) {
           spacing={6}
           w="full"
         >
-          {posts.map((post) => (
-            <NextLink href={`${server}/blog/new-beginning`}>
+          {posts.map((post, i) => (
+            <NextLink
+              key={i}
+              href={`${server}/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
+            >
               <Box
                 mx="auto"
                 rounded="lg"
@@ -34,8 +37,8 @@ export default function Blog({ posts }) {
                   w="full"
                   h={64}
                   fit="cover"
-                  src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                  alt="Article"
+                  src={post.data.image}
+                  alt="Blog Post Cover Image"
                 />
                 <Box p={4}>
                   <Box>
