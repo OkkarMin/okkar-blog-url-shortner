@@ -29,7 +29,7 @@ export default function Blog({ posts }) {
               <Box
                 width="full"
                 rounded="lg"
-                boxShadow="base"
+                boxShadow="md"
                 _hover={{ boxShadow: "lg", cursor: "pointer" }}
               >
                 <Box p={4}>
