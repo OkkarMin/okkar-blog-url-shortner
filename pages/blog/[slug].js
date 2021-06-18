@@ -53,7 +53,7 @@ const components = {
   ul: (props) => <UnorderedList>{props.children}</UnorderedList>,
   ol: (props) => <OrderedList>{props.children}</OrderedList>,
   li: (props) => (
-    <ListItem ml="1rem" fontSize="lg" lineHeight="1.8rem" {...props} />
+    <ListItem ml="3ch" fontSize="lg" lineHeight="1.8rem" {...props} />
   ),
   code: CodeBlock,
   inlineCode: (props) => <Code {...props} />,
