@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import NextLink from "next/link";
 import { server } from "config";
-import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 import { postFilePaths, POSTS_PATH } from "lib/mdxUtils";
 
 import Layout from "components/layout/layout";
@@ -27,19 +27,11 @@ export default function Blog({ posts }) {
               href={`${server}/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
             >
               <Box
-                mx="auto"
+                width="full"
                 rounded="lg"
                 boxShadow="base"
                 _hover={{ boxShadow: "lg", cursor: "pointer" }}
               >
-                <Image
-                  roundedTop="lg"
-                  w="full"
-                  h={64}
-                  fit="cover"
-                  src={post.data.image}
-                  alt="Blog Post Cover Image"
-                />
                 <Box p={4}>
                   <Box>
                     <Heading fontSize="2xl">{post.data.title}</Heading>
