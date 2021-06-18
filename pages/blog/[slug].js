@@ -37,7 +37,8 @@ const CodeBlock = ({ className, children: codes }) => {
           },
         }}
       >
-        {codes}
+        {/* see https://stackoverflow.com/a/38645276 */}
+        {codes.trimRight()}
       </SyntaxHighlighter>
     </Box>
   );
@@ -56,6 +57,7 @@ const components = {
   ),
   code: CodeBlock,
   inlineCode: (props) => <Code {...props} />,
+  Box,
   Image,
 };
 
