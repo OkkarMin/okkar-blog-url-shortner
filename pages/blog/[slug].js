@@ -15,8 +15,8 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, POSTS_PATH } from "lib/mdxUtils";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import tomorrow from "react-syntax-highlighter/dist/cjs/styles/prism/tomorrow";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import atomOneDark from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark";
 
 import Layout from "components/layout/layout";
 import BlogPostLink from "components/blog_post_link";
@@ -24,22 +24,19 @@ import Container100Ch from "components/layout/container";
 
 const CodeBlock = ({ className, children: codes }) => {
   return (
-    <Box borderRadius="lg" maxWidth="100ch">
-      <SyntaxHighlighter
-        language={className.split("-")[1]}
-        style={tomorrow}
-        wrapLines={true}
-        codeTagProps={{
-          style: {
-            fontFamily: "JetBrains Mono",
-            lineHeight: "1rem",
-          },
-        }}
-      >
-        {/* see https://stackoverflow.com/a/38645276 */}
-        {codes.trimRight()}
-      </SyntaxHighlighter>
-    </Box>
+    <SyntaxHighlighter
+      language={className.split("-")[1]}
+      style={atomOneDark}
+      wrapLines={true}
+      codeTagProps={{
+        style: {
+          fontFamily: "JetBrains Mono",
+        },
+      }}
+    >
+      {/* see https://stackoverflow.com/a/38645276 */}
+      {codes.trimRight()}
+    </SyntaxHighlighter>
   );
 };
 
