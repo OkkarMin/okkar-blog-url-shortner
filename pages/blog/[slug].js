@@ -28,7 +28,6 @@ const CodeBlock = ({ className, children: codes }) => {
       <SyntaxHighlighter
         language={className.split("-")[1]}
         style={atomOneDark}
-        wrapLines={true}
         codeTagProps={{
           style: {
             fontFamily: "JetBrains Mono",
