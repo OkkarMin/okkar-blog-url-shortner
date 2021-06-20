@@ -29,7 +29,6 @@ const CodeBlock = ({ className, children: codes }) => {
         language={className.split("-")[1]}
         style={tomorrow}
         wrapLines={true}
-        showLineNumbers={true}
         codeTagProps={{
           style: {
             fontFamily: "JetBrains Mono",
