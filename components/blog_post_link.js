@@ -7,9 +7,9 @@ export default function BlogPostLink({ as, href, ...otherProps }) {
 
   if (isInternalLink) {
     return (
-      <NextLink as={as} href={href}>
+      <NextLink href={href}>
         <Link color="red.500">
-          <a {...otherProps} />
+          <span {...otherProps} />
         </Link>
       </NextLink>
     );
@@ -17,7 +17,7 @@ export default function BlogPostLink({ as, href, ...otherProps }) {
 
   return (
     <Link color="red.500" href={href} isExternal>
-      <a {...otherProps} /> <ExternalLinkIcon />
+      <span {...otherProps} /> <ExternalLinkIcon />
     </Link>
   );
 }
