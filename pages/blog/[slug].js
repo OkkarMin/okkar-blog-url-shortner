@@ -24,19 +24,21 @@ import Container100Ch from "components/layout/container";
 
 const CodeBlock = ({ className, children: codes }) => {
   return (
-    <SyntaxHighlighter
-      language={className.split("-")[1]}
-      style={atomOneDark}
-      wrapLines={true}
-      codeTagProps={{
-        style: {
-          fontFamily: "JetBrains Mono",
-        },
-      }}
-    >
-      {/* see https://stackoverflow.com/a/38645276 */}
-      {codes.trimRight()}
-    </SyntaxHighlighter>
+    <Box maxWidth={["xs", "md", "xl", "full"]}>
+      <SyntaxHighlighter
+        language={className.split("-")[1]}
+        style={atomOneDark}
+        wrapLines={true}
+        codeTagProps={{
+          style: {
+            fontFamily: "JetBrains Mono",
+          },
+        }}
+      >
+        {/* see https://stackoverflow.com/a/38645276 */}
+        {codes.trimRight()}
+      </SyntaxHighlighter>
+    </Box>
   );
 };
 
