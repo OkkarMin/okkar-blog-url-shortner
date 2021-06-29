@@ -60,7 +60,7 @@ const components = {
 
 export default function BlogPost({ source }) {
   return (
-    <Layout title="📝 Blog">
+    <Layout>
       <Container100Ch>
         <VStack mt="4" alignItems="flex-start" spacing="6">
           <MDXRemote {...source} components={components} />
