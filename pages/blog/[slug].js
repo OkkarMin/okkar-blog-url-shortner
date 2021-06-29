@@ -19,7 +19,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import atomOneDark from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark";
 
 import Layout from "components/layout/layout";
-import BlogPostLink from "components/blog_post_link";
+import BlogPostLink from "components/blog/blog_post_link";
 import Container100Ch from "components/layout/container";
 
 const CodeBlock = ({ className, children: codes }) => {
