@@ -49,8 +49,8 @@ export default function BioExperienceTabs() {
             trade offs.
           </Text>
           <Text mt={4}>
-            Drop me a note if you would like to collaborate on a project
-            together. Will help in anyway I could!
+            Drop me a note via GitHub or LinkedIn if you would like to
+            collaborate on a project together. Will help in anyway I could!
           </Text>
           <Box textAlign="center" mt="4">
             <Text as="em">
