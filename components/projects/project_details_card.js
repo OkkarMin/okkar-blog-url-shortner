@@ -54,13 +54,13 @@ export default function ProjectDetailsCard({ isFirst, details }) {
 
         <Divider />
 
-        <Box as="p" pt="3">
+        <Box pt="3">
           {details.description}
 
           <HStack mt="4">
-            {Object.keys(details.links).map((linkName) => {
+            {Object.keys(details.links).map((linkName, i) => {
               return (
-                <Text>
+                <Text key={i}>
                   <Link
                     isExternal
                     href={details.links[linkName]}
