@@ -18,6 +18,7 @@ import { postFilePaths, POSTS_PATH } from "lib/mdxUtils";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import atomOneDark from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark";
 
+import BlogPostSEOWrapper from "components/blog/blog_post_seo_wrapper";
 import Layout from "components/layout/layout";
 import BlogPostLink from "components/blog/blog_post_link";
 import Container100Ch from "components/layout/container";
@@ -58,15 +59,17 @@ const components = {
   Image,
 };
 
-export default function BlogPost({ source }) {
+export default function BlogPost({ source, frontMatter }) {
   return (
-    <Layout>
-      <Container100Ch>
-        <VStack mt="4" alignItems="flex-start" spacing="6">
-          <MDXRemote {...source} components={components} />
-        </VStack>
-      </Container100Ch>
-    </Layout>
+    <BlogPostSEOWrapper frontMatter={frontMatter}>
+      <Layout>
+        <Container100Ch>
+          <VStack mt="4" alignItems="flex-start" spacing="6">
+            <MDXRemote {...source} components={components} />
+          </VStack>
+        </Container100Ch>
+      </Layout>
+    </BlogPostSEOWrapper>
   );
 }
 
