@@ -7,10 +7,10 @@
 
 ## Main features 🚀
 
-- ✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
-- ✅ Track aliases click rate
-- (Work in Progress) Blog/Portfolio
-- (Work in Progress) Dashboard to add/remove/view aliases
+- ✅  Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/
+- ✅  Track aliases click rate
+- ✅  Blog/Portfolio
+- (Work in Progress) Dashboard to add/remove/view shortened URL
 
 ## The Stack 🥞
 
