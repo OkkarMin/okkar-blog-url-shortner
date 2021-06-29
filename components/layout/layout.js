@@ -7,9 +7,11 @@ import Footer from "./footer";
 export default function Layout({ children, title }) {
   return (
     <Flex direction="column" minHeight="100vh" padding={[2, 4]}>
-      <Head>
-        <title>{`${title} | Okkar Min`}</title>
-      </Head>
+      {title ? (
+        <Head>
+          <title>{`${title} | Okkar Min`}</title>
+        </Head>
+      ) : null}
 
       <Header />
 
