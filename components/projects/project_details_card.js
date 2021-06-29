@@ -66,7 +66,8 @@ export default function ProjectDetailsCard({ isFirst, details }) {
                     href={details.links[linkName]}
                     color="red.500"
                   >
-                    {linkName} <ExternalLinkIcon mx="2px" />
+                    {linkName}
+                    <ExternalLinkIcon mx="2px" />
                   </Link>
                 </Text>
               );
