@@ -12,6 +12,20 @@ const projectDetails = [
     },
   },
   {
+    title: "Smiley LCD Display IoT",
+    description:
+      "Collaborated with Darren, my mechanical engineering friend. In the standby state, LCD displays the current date and time. Upon sending a message from the mobile phone app, the text is sent to Blynk(managed service) and is pushed to the IoT device to display on the LCD module. The intended receiver then acknowledges the message by pressing a physical button and that puts it back in the standby state.",
+    imageUrl: "/static/images/projects/smileylcd.gif",
+    language: "C",
+    technology: ["Arduino", "ESP32", "Hardware", "Blynk", "3D Printing"],
+    links: {
+      Darren: "https://www.linkedin.com/in/darren-cheong",
+      GitHub: "https://github.com/OkkarMin/smiley-lcd",
+      LinkedInVideo:
+        "https://www.linkedin.com/posts/okarmin_iot-electronics-3dmodeling-activity-6811527034943221760-XLq5",
+    },
+  },
+  {
     title: "TrashHeroes",
     description:
       "Automated waste sorter that utilizes artificial intelligence to significantly reduce contamination of recyclables",
