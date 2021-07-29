@@ -1,11 +1,33 @@
 import { server } from "../../config";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
+
 import { Button, HStack, IconButton, Link } from "@chakra-ui/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
+const getButtonVariant = (currentPath, buttonName) =>
+  currentPath == buttonName ? "solid" : "ghost";
+
 export default function Header() {
+  const { pathname: currentPath } = useRouter();
+
   return (
     <HStack justifyContent="space-around">
+      {/* Home, Projects and Blog buttons */}
+      <HStack spacing={0}>
+        <NextLink href={`${server}/`}>
+          <Button variant={getButtonVariant(currentPath, "/")}>Home</Button>
+        </NextLink>
+        <NextLink href={`${server}/projects`}>
+          <Button variant={getButtonVariant(currentPath, "/projects")}>
+            Projects
+          </Button>
+        </NextLink>
+        <NextLink href={`${server}/blog`}>
+          <Button variant={getButtonVariant(currentPath, "/blog")}>Blog</Button>
+        </NextLink>
+      </HStack>
+
       {/* Header logos */}
       <HStack spacing={0}>
         <Link isExternal href={`${server}/github`}>
@@ -22,19 +44,6 @@ export default function Header() {
             icon={<AiFillLinkedin />}
           />
         </Link>
-      </HStack>
-
-      {/* Header Blog and Resume buttons */}
-      <HStack spacing={0}>
-        <NextLink href={`${server}/`}>
-          <Button variant="ghost">Home</Button>
-        </NextLink>
-        <NextLink href={`${server}/projects`}>
-          <Button variant="ghost">Projects</Button>
-        </NextLink>
-        <NextLink href={`${server}/blog`}>
-          <Button variant="ghost">Blog</Button>
-        </NextLink>
       </HStack>
     </HStack>
   );
