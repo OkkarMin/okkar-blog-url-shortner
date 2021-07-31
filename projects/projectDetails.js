@@ -1,14 +1,15 @@
 const projectDetails = [
   {
-    title: "LinkedIn Connections Analyzer",
+    title: "Where-To-Mug",
     description:
-      "Hey hey 👋 , welcome to my LinkedIn connections analyzer. I recently found out that LinkedIn allow you to export your connections data in CSV format. I got curious and downloaded a copy for myself found out it contains informations that is publicly available to LinkedIn users. Data you are seeing now is my (Okkar Min's) connections data. If you would like to see your own data, just upload your Connections.csv obtained from LinkedIn using the uploader box",
-    imageUrl: "/static/images/projects/linkedin_analyzer.gif",
-    language: "Python",
-    technology: ["Pandas", "Streamlit", "Plotly", "LinkedIn", "Data Analysis"],
+      "Ever wonder which tutorial room is free* and which is not? 🤨 This tool could help you find out your dream tutorial room 🥳",
+    imageUrl:
+      "https://raw.githubusercontent.com/OkkarMin/where-to-mug/main/doc/where-to-mug-demo.gif",
+    language: "Typescript",
+    technology: ["React", "NextJS", "ChakraUI", "API", "CSV"],
     links: {
-      GitHub: "https://github.com/OkkarMin/linkedin-connections-analyzer",
-      App: "https://okkarm.in/linkedin-connections-analyzer",
+      GitHub: "https://github.com/OkkarMin/where-to-mug",
+      App: "https://wheretomug.ml",
     },
   },
   {
@@ -41,6 +42,18 @@ const projectDetails = [
     links: {
       GitHub: "https://github.com/OkkarMin/okkar-blog-url-shortner",
       Youtube: "https://www.youtube.com/watch?v=vrjFZZSnsug",
+    },
+  },
+  {
+    title: "LinkedIn Connections Analyzer",
+    description:
+      "Hey hey 👋 , welcome to my LinkedIn connections analyzer. I recently found out that LinkedIn allow you to export your connections data in CSV format. I got curious and downloaded a copy for myself found out it contains informations that is publicly available to LinkedIn users. Data you are seeing now is my (Okkar Min's) connections data. If you would like to see your own data, just upload your Connections.csv obtained from LinkedIn using the uploader box",
+    imageUrl: "/static/images/projects/linkedin_analyzer.gif",
+    language: "Python",
+    technology: ["Pandas", "Streamlit", "Plotly", "LinkedIn", "Data Analysis"],
+    links: {
+      GitHub: "https://github.com/OkkarMin/linkedin-connections-analyzer",
+      App: "https://okkarm.in/linkedin-connections-analyzer",
     },
   },
   {
