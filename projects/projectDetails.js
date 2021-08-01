@@ -5,7 +5,7 @@ const projectDetails = [
       "Ever wonder which tutorial room is free* and which is not? 🤨 This tool could help you find out your dream tutorial room 🥳",
     imageUrl:
       "https://raw.githubusercontent.com/OkkarMin/where-to-mug/main/doc/where-to-mug-demo.gif",
-    language: "Typescript",
+    language: "TypeScript",
     technology: ["React", "NextJS", "ChakraUI", "API", "CSV"],
     links: {
       GitHub: "https://github.com/OkkarMin/where-to-mug",
