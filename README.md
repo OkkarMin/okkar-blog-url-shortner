@@ -11,6 +11,7 @@
 - ✅ Track aliases click rate
 - ✅ Blog/Portfolio
 - 🟩 Dashboard to add/remove/view shortened URL
+- 🟩 Quick 'dashboard' to show my 10 latest commits
 
 ## The Stack 🥞
 
