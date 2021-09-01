@@ -10,8 +10,11 @@
 - ✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/)
 - ✅ Track aliases click rate
 - ✅ Blog/Portfolio
-- 🟩 Dashboard to add/remove/view shortened URL
-- 🟩 Quick 'dashboard' to show my 10 latest commits
+
+## TODO
+
+- [ ] Add a dashboard to add/remove/view shortened URL (only Okkar)
+- [ ] Add panel/card to show my 10 latest commits (for public)
 
 ## The Stack 🥞
 
