@@ -1,15 +1,15 @@
 # Blog + URL shortener
 
-- [okkarm.in](https://okkarm.in)
-- [okkarm.in/linkedin](https://okkarm.in/linkedin)
-- [okkarm.in/telegram](https://okkarm.in/telegram)
-- [okkarm.in/github](https://okkarm.in/github)
+[okkarm.in](https://okkarm.in)
+[okkarm.in/linkedin](https://okkarm.in/linkedin)
+[okkarm.in/telegram](https://okkarm.in/telegram)
+[okkarm.in/github](https://okkarm.in/github)
 
 ## Main features 🚀
 
-- ✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/)
-- ✅ Track aliases click rate
-- ✅ Blog/Portfolio
+✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/)
+✅ Track aliases click rate
+✅ Blog/Portfolio
 
 ## TODO
 
