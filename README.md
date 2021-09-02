@@ -7,7 +7,7 @@
 
 ## Main features 🚀
 
-✅ Redirect known aliases to the full url address (e.g: okkar.tk/linkedin -> linkedin.com/in/okarmin/)
+✅ Redirect known aliases to the full url address (e.g: okkarm.in/linkedin -> linkedin.com/in/okarmin/)
 ✅ Track aliases click rate
 ✅ Blog/Portfolio
 
