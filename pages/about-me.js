@@ -1,4 +1,4 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Center, Heading, Text } from "@chakra-ui/react";
 
 const isServer = typeof window === "undefined";
 let RSS = null;
@@ -13,7 +13,13 @@ export default function AboutMe() {
         <RSS.Animator
           animation={RSS.batch(RSS.Fade(), RSS.Sticky(), RSS.MoveOut(0, -200))}
         >
-          <Heading>Let't me show you scroll animation 😀</Heading>
+          <Center>
+            <Heading>Hey there!👋</Heading>
+          </Center>
+          <Heading>Let's get to know me better!</Heading>
+          <Center>
+            <Heading alignSelf="flex-end">↓</Heading>
+          </Center>
         </RSS.Animator>
       </RSS.ScrollPage>
 
