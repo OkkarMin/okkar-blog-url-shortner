@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -22,6 +23,12 @@ import BlogPostSEOWrapper from "components/blog/blog_post_seo_wrapper";
 import Layout from "components/layout/layout";
 import BlogPostLink from "components/blog/blog_post_link";
 import Container100Ch from "components/layout/container";
+
+const OpenNewTab = ({ urlToOpen }) => {
+  useEffect(() => {
+    window.open(urlToOpen);
+  }, []);
+};
 
 const CodeBlock = ({ className, children: codes }) => {
   return (
@@ -57,6 +64,7 @@ const components = {
   inlineCode: (props) => <Code {...props} />,
   Box,
   Image,
+  OpenNewTab,
 };
 
 export default function BlogPost({ source, frontMatter }) {
