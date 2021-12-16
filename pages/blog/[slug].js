@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -25,9 +24,11 @@ import BlogPostLink from "components/blog/blog_post_link";
 import Container100Ch from "components/layout/container";
 
 const OpenNewTab = ({ urlToOpen }) => {
-  useEffect(() => {
+  if (typeof window !== "undefined") {
     window.open(urlToOpen);
-  }, []);
+  }
+
+  return null;
 };
 
 const CodeBlock = ({ className, children: codes }) => {
